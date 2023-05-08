@@ -22,7 +22,7 @@ eProject documentation at https://github.com/OceanGeocdir/WirelessWorld_group3_T
 
 ============================
 
-eProject published at https://lnnhi1310.github.io/Kitchen-Appliances/index.html
+eProject published at https://oceangeocdir.github.io/WirelessWorld_group3_T1.2302.M0/
 
 ============================
 
