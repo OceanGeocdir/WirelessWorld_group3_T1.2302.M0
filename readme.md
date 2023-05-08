@@ -18,7 +18,7 @@ Student1455062 Ten: Pham Dac An
 
 ============================
 
-eProject documentation at https://github.com/OceanGeocdir/WirelessWorld_group3_T1.2302.M0
+eProject documentation at https://github.com/OceanGeocdir/WirelessWorld_group3_T1.2302.M0/tree/main/document
 
 ============================
 
