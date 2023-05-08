@@ -1,5 +1,4 @@
-Ten de tai
-============================
+# Ten de tai
 
 eProject-2023 Batch no: T1.2302.m0
 
@@ -9,17 +8,17 @@ Project title: Wireless World
 
 4 collaborators:
 
-Student1455055  Ten: 
+Student1455772 Ten: Dang Dai Duong
 
-Student1455055  Ten: Pham Anh Vu
+Student1455055 Ten: Pham Anh Vu
 
-Student1396934  Ten:
+Student1455048 Ten: Huynh Tuan Duy
 
-Student1396932  Ten:
+Student1455062 Ten: Pham Dac An
 
 ============================
 
-eProject documentation at https://github.com/cuoilen007/test/tree/main/document
+eProject documentation at https://github.com/OceanGeocdir/WirelessWorld_group3_T1.2302.M0
 
 ============================
 
