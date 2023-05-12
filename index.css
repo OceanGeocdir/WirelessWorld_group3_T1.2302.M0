@@ -93,7 +93,7 @@ body {
 
 .toolbar__list-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* trình bày bố cục theo cột dọc */
   font-size: 12px;
 }
 
@@ -202,7 +202,7 @@ body {
 
 .toolbar__list--login .toolbar__list-content {
     text-align: center;
-    line-height: 13px;
+    line-height: 13px; /* Thiết lập chiều cao giữa các dòng */
 }
 
 .toolbar__list--login .toolbar__list-content {
@@ -219,15 +219,15 @@ body {
 #modal__container {
   height: 100vh;
   background: rgba(0, 0, 0, 0.2);
-  position: fixed;
+  position: fixed; /* phủ toàn bộ màn hình */
   top: 64px;
   left: 0;
   width: 100%;
   cursor: default;
   display: none; 
-  transform-origin: top;
+  transform-origin: top; /* thuộc tính neo gốc */
   animation: modalNotifyGrowth linear 0.3s;
-  z-index: 1;
+  z-index: 1; /* thuộc tính xếp chống thứ tự hiển thị lên nhau */
 }
 
 /* Tạo animation modal */
@@ -252,16 +252,18 @@ body {
   max-width: 205px;
   position: relative;
   top: 5px;
-  left: 260px;
+  left: 180px;
   border-radius: 10px;
 }
 
+/* Mã giả (pseudo-element) là 1 trong những selector
+  giúp tạo kiểu dáng độc đáo mà ko thay đổi tài liệu HTML */
 .modal__body:before {
   content: "";
   display: block;
   position: absolute;
   top: -18px;
-  right: -50px;
+  right: -30px;
   width: 117px;
   height: 20px;
   background-color: transparent;
