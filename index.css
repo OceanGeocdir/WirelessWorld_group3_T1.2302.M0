@@ -624,7 +624,12 @@ body {
    
   }
   
-  
+  /* carousel */
+  .carousel-inner{
+    max-height: 700px;
+    max-width: 1600px;
+  }
+  /* end of carousel */
   
   
   /*  css  */
