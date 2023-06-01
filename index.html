@@ -2,909 +2,1083 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <script src="https://kit.fontawesome.com/f1f37bb2ce.js"
-            crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="icon/themify-icons/themify-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" 
-    crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" 
-    crossorigin="anonymous"></script>
-    <link rel="stylesheet" 
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  <script src="/angular.min.js"></script>
 
-  <!-- Vendor CSS Files -->
-  
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="index.js">
-    <link rel="stylesheet" href="index.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+
+  <!-- Carousel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css
+" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Custom StyleSheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <title>G3SHOP</title>
 </head>
-    <!-- Tạo thanh header -->
-    <header>
-        <div id="header">
-            <div class="toolbar">
-                <!-- Gắn logo -->
-                <div class="toolbar__list">
-                    <!-- <img src="img/logo-cps-full-2.png" alt="" 
-                    class="toolbar__list-logo" width="161px" height="52px"> -->
+
+<body>
+  <!--?-------@ Header @------------>
+  <div id="header-container"></div>
+  <!--?-------@ Header @------------>
+
+  <!-- ! -------------------@ Hero @--------------------------------------------------------------------------------- -->
+
+  <div class="hero">
+    <div class="glide" id="glide_1">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide">
+            <div class="hero__center">
+              <div class="hero__left">
+                <span class="">New Inspiration 2020</span>
+                <h1 class="">PHONES MADE FOR YOU!</h1>
+                <p>Trending from mobile and headphone style collection</p>
+                <a href="#"><button class="hero__btn">SHOP NOW</button></a>
+              </div>
+              <div class="hero__right">
+                <div class="hero__img-container">
+                  <img class="banner_01" src="./images/banner_01.png" alt="banner2" />
                 </div>
-
-                <!-- Tạo nút danh mục -->
-                <div class="toolbar__list">
-                    <div class="toolbar__list--directory">
-                        <h5><i class="bi bi-card-text"></i></h5>
-                        <span id="btn-open">Danh mục</span>
-                        <!-- Modal Danh mục-->
-                    <div id="modal__container">
-                        <!-- Khung bọc bên ngoài -->
-                        <div class="modal__body">
-                            <!-- Directory phone -->
-                            <div class="modal__directory--notify-item">   
-                                <img src="img/phone.jpg" alt="" width="30px" height="30px">
-                                <span>Điện thoại</span>
-                                <i class="bi bi-chevron-right"></i>
-                                <!-- Directory phone expand -->
-                                <div class="modal__directory--item-phone">
-                                    <div class="modal__directory--phone-brand">
-                                        <div class="modal__directory--brand-title">
-                                            Thương hiệu điện thoại
-                                        </div>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>iPhone</span>
-                                            </div>                                         
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Samsung</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Xiaomi</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>OPPO</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Vivo</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Nokia</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Realme</span>
-                                            </div>
-                                        </a>
-                                    </div>
-        
-                                    <div class="modal__directory--phone-brand">
-                                        <div class="modal__directory--brand-title">Mức giá điện thoại</div>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Dưới 5 triệu</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Từ 5 - 10 triệu</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Từ 10 - 15 triệu</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Trên 15 triệu</span>
-                                            </div>
-                                        </a>
-                                    </div>
-        
-                                    <div class="modal__directory--phone-brand">
-                                        <div class="modal__directory--brand-title">
-                                            <span>
-                                                Điện thoại hot
-                                                <img src="img/sấm sét.jpg" alt="" width="15px" height="15px">
-                                            </span>
-                                        </div>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Iphone 14 Vàng mới</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Galaxy Z Fold4</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Redmi Note 12 Series</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Galaxy S23 Ultra</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Galaxy A34</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>OPPO Find N2 Flip</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Directory accessory -->
-                            <div class="modal__directory--notify-item">
-                                <img src="img/sạc.png" alt="" width="30px" height="30px">
-                                <span>Phụ kiện</span>
-                                <i class="bi bi-chevron-right"></i>
-                                <!-- Directory accessory expand -->
-                                <div class="modal__directory--item-phone">
-                                    <div class="modal__directory--phone-brand">
-                                        <div class="modal__directory--brand-title">
-                                            Phụ kiện di động
-                                        </div>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Phụ kiện Apple</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Dán màn hình</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Ốp lưng - Bao da</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Thẻ nhớ</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Apple Care+</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Sim 4G</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Sim số đẹp</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Cáp, sạc</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Pin dự phòng</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="modal__directory--phone-brand">
-                                        <div class="modal__directory--brand-title">
-                                            Phụ kiện iPhone 14
-                                        </div>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Cáp sạc iPhone 14</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Ốp lưng iPhone 14</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Dán màn hình iPhone 14</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="modal__directory--phone-brand">
-                                        <div class="modal__directory--brand-title">
-                                            Phụ kiện Galaxy S23 Series
-                                        </div>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Ốp lưng S23 Series</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Dán màn hình S23 Series</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Directory old mail -->
-                            <div class="modal__directory--notify-item">
-                                <img src="img/thu cũ.png" alt="" width="30px" height="30px">
-                                <span>Thu cũ đổi mới</span>
-                                <i class="bi bi-chevron-right"></i>
-                                <!-- Directory old mail expand -->
-                                <div class="modal__directory--item-renovate">
-                                    <div class="modal__directory--phone-brand">
-                                        <div class="modal__directory--brand-title">
-                                            Chọn theo hãng
-                                        </div>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Thu cũ iPhone</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Thu cũ Samsung</span>                                            
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Thu cũ Xiaomi</span> 
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Directory product old -->
-                            <div class="modal__directory--notify-item">
-                                <img src="img/hàng cũ.png" alt="" width="30px" height="30px">
-                                <span>Hàng cũ</span>
-                                <i class="bi bi-chevron-right"></i>
-                                <!-- Directory product old expand -->
-                                <div class="modal__directory--item-phone">
-                                    <div class="modal__directory--phone-brand">
-                                        <div class="modal__directory--brand-title">
-                                            Chọn dòng iPhone cũ
-                                        </div>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>iPhone 14 series cũ</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>iPhone 13 series cũ</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>iPhone 12 series cũ</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>iPhone 11 series cũ</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Xem tất cả iPhone cũ</span>
-                                            </div>
-                                        </a>
-                                    </div>
-
-                                    <div class="modal__directory--phone-brand">
-                                        <div class="modal__directory--brand-title">
-                                            Điện thoại Android cũ
-                                        </div>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Samsung cũ</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Xiaomi cũ</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>OPPO cũ</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Nokia cũ</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Realme cũ</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Vivo cũ</span>
-                                            </div>
-                                        </a>
-                                    </div>
-
-                                    <div class="modal__directory--phone-brand">
-                                        <div class="modal__directory--brand-title">
-                                            Sản phẩm nổi bật
-                                            <img src="img/sấm sét.jpg" alt="" width="15px" height="15px">
-                                        </div>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>iPhone 13 series cũ</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>iPhone 12 Pro 256GB cũ đẹp</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>iPhone 8 Plus 64GB cũ</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Xiaomi 11T đã kích hoạt</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Directory Sale -->
-                            <div class="modal__directory--notify-item">
-                                <img src="img/loa.jpg" alt="" width="30px" height="30px">
-                                <span>Khuyến mãi</span>
-                                <i class="bi bi-chevron-right"></i>
-                                <!-- Directory sale expand -->
-                                <div class="modal__directory--item-renovate">
-                                    <div class="modal__directory--phone-brand">
-                                        <div class="modal__directory--brand-title">
-                                            Khuyến mãi
-                                        </div>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Hot sale cuối tuần</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Ưu đãi thanh toán</span>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="modal__directory--brand-name">
-                                                <span>Khách hàng doanh nghiệp B2B</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>                           
-                    </div>
-                    <!-- End modal -->
-                    </div>
-                </div>
-
-                <!-- Check address -->
-                <div class="toolbar__list">
-                    <div class="toolbar__list--address">
-                        <!-- gán icon -->
-                        <div class="toolbar__list-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
-                                <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
-                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                              </svg>
-                        </div>
-                        <div class="toolbar__list-content">
-                            <p class="toolbar__list-content--icon">
-                                <!-- Xem giá tại -->
-                                <i class="ti-angle-down"></i>
-                            </p>
-                            <p class="toolbar__list-content--add">
-                                <!-- <span>Hồ Chí Minh</span> -->
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Searchbox -->
-                <div class="toolbar__list">
-                    <div class="toolbar__list--search-box">
-                        <div class="toolbar__list--input-group-btn">
-                            <button type="submit">
-                                <div class="toolbar__list-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                      </svg>
-                                </div>
-                            </button>
-                        </div>
-                        <input type="text" placeholder="Bạn cần tìm gì?" style="height: 34px;">
-                    </div>
-                </div>
-
-                <!-- Tra cứu đơn hàng -->
-                <div class="toolbar__list">
-                    <div class="toolbar__list-lookup">
-                        <p class="toolbar__list-icon">
-                            <i class="fas fa-truck-fast fa-flip-horizontal fa-2xl" 
-                            style="color: #fafafa;"></i>
-                        </p>
-                        <p class="toolbar__list-name">
-                            <!-- <span>Tra cứu đơn hàng</span> -->
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Cart -->
-                <div class="toolbar__list">
-                    <div class="toolbar__list-cart">
-                        <p class="toolbar__list-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
-                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                              </svg> 
-                        </p>         
-                        <span class="toolbar_list-info">Giỏ hàng</span>
-                    </div>
-                </div>
-
-                <!-- Login -->
-                <div class="toolbar__list">
-                    <div class="toolbar__list--login">
-                        <div class="toolbar__list-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 20 20">
-                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                              </svg>
-                        </div>
-                        <div class="toolbar__list-content">Đăng nhập</div>
-                        <!-- <a href="loginform.html"></a> -->
-                    </div>
-                </div>
+              </div>
             </div>
+          </li>
+          <li class="glide__slide">
+            <div class="hero__center">
+              <div class="hero__left">
+                <span>New Inspiration 2020</span>
+                <h1>PHONES MADE FOR YOU!</h1>
+                <p>Trending from mobile and headphone style collection</p>
+                <a href="#"><button class="hero__btn">SHOP NOW</button></a>
+              </div>
+              <div class="hero__right">
+                <img class="banner_02" src="./images/banner_02.png" alt="banner2" />
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="glide__bullets" data-glide-el="controls[nav]">
+        <button class="glide__bullet" data-glide-dir="=0"></button>
+        <button class="glide__bullet" data-glide-dir="=1"></button>
+      </div>
+
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+          <svg>
+            <use xlink:href="./images/sprite.svg#icon-arrow-left2"></use>
+          </svg>
+        </button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+          <svg>
+            <use xlink:href="./images/sprite.svg#icon-arrow-right2"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!--------------------------------------------- 6 brands ---------------------------------------------------------->
+  <div class="container">
+    <div class="main">
+      <!-- iPhone -->
+      <div class="main__phone" data-aos="fade-right">
+        <div class="phone__img apple">
+          <img src="images/main_brands/collection_01_resizenew.png" alt="" class="apple default" />
+          <img src="images/main_brands/banner_02_resize.png" alt="" class="apple hover" />
         </div>
-    </header> 
 
-    <!-- Body -->
-    <div id="wrapper-content">
-        <!-- NAVIGATION -->
-        <nav class="navbar">
-            <ul class="navbar__list">
-                <li><a href="">HOME</a></li>
-                <li><a href="">PRODUCT</a></li>
-                <li class="navbar__list">
-                    <a href="">ABOUT</a>
-                </li>
-                <li><a href="">CONTACT US</a></li>
-                <li class="navbar__list--payment">
-                    <a href="">PAYMENT</a>
-                </li>
-            </ul>
-        </nav>
-
-        <!-- Video introduce -->
-        <div class="sidebar">
-            <video autoplay muted loop>
-                <source src="images/iphone/iphone_introduce.mp4" type="video/mp4">
-            </video>
+        <div class="phone__content apple">
+          <img src="images/main_brands/logo_brand/apple_logo.png" alt="" class="apple" />
+          <a href="">
+            <button>SHOP NOW</button>
+          </a>
         </div>
-        <!--Banner and image  -->
-        <div class="banner">
-            <div class="banner__header">
-                <h1 class="banner__header--title">
-                    iPhone 14
-                </h1>
-                <h3 class="banner__header--para">
-                    Wonderful
-                </h>
-                <div class="banner__header--link">
-                    <a href="">
-                        <span>Learn more</span>
-                        <i class="bi bi-chevron-right"></i>
-                    </a>
-                    <a href="" class="banner__header--link-buy">
-                        <span>Buy</span>
-                        <i class="bi bi-chevron-right"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="banner__img">
-                <img src="image/banner.jpg" alt="">
-            </div>
-            <div class="banner__content">
-                <h1>THE EXPLORATION THIS SUMMER </h1>
-            </div>
+      </div>
+      <!-- Samsung -->
+      <div class="main__phone" data-aos="fade-left" data-aos-delay="300">
+        <div class="phone__img samsung">
+          <img src="images/main_brands/s23-ultra-tim-resize.png" alt="" class="samsung default" />
+          <img src="images/main_brands/samsung-galaxy-note-10.png" alt="" class="samsung hover" />
         </div>
-        <!-- Show 5 product of iphone -->
-        <div class="content">
-            <div class="container">
-                <h2>IPHONE</h2>
-            </div>
-            <div class="select">
-                <div class="product">
-                    <div class="khung">
-                        <img
-                            src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/t/_/t_m_18.png">
-                    </div>
-                    <h4>Iphone 14 Pro Max</h4>
-                    <p>Giá: 26.450.000 VNĐ</p>
-                    <button>Buy Now</button>
-                </div>
-                <div class="product">
-                    <div class="khung">
-                        <img
-                            src="https://cdn2.cellphones.com.vn/358x/media/catalog/product/v/_/v_ng_1_2.png">
-                    </div>
-                    <h4>iPhone 14 Pro</h4>
-                    <p>Giá: 24.750.000 VNĐ</p>
-                    <button>Buy Now</button>
-                </div>
-                <div class="product">
-                    <div class="khung">
-                        <img
-                            src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/3/_/3_51_1_7.jpg">
-                    </div>
-                    <h4>iPhone 13 PM</h4>
-                    <p>Giá: 24.590.000 VNĐ</p>
-                    <button>Buy Now</button>
-                </div>
 
-
-                <div class="product">
-                    <div class="khung">
-                        <img
-                            src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/1/4/14_1_9_2_9.jpg">
-                    </div>
-                    <h4>iPhone 13</h4>
-                    <p>Giá: 16.890.000VNĐ</p>
-                    <button>Buy Now</button>
-                </div>
-
-                <div class="product">
-                    <div class="khung">
-                        <img
-                            src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/1/_/1_252.jpg">
-                    </div>
-                    <h4>iPhone 12</h4>
-                    <p>Giá: 14.690.000 VNĐ</p>
-                    <button>Buy Now</button>
-                </div>
-                <!-- text in banner 2  -->
-                <div id="banner__2">
-                    <div class="content__2">
-                        <h1 id="content__2__text">THE MYSTERY </h1>
-                    </div>
-                </div>
-                <!-- show 5 product of samsung -->
-                <div class="content">
-                    <div class="container">
-                        <h2>SAMSUNG</h2>
-                    </div>
-                    <div class="select">
-
-                        <div class="product">
-                            <div class="khung">
-                                <img
-                                    src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/s/2/s23-ultra-tim.png">
-                            </div>
-                            <h4>SamsungS23Ultra</h4>
-                            <p>Giá: 26.030.000 VNĐ</p>
-                            <button>Buy Now</button>
-                        </div>
-                        <div class="product">
-                            <div class="khung">
-                                <img
-                                    src="https://cdn2.cellphones.com.vn/x358,webp,q100/media/catalog/product/g/t/gtt7766.jpg">
-                            </div>
-                            <h4>Redmi Note12Pro </h4>
-                            <p>Giá: 8.990.000 VNĐ</p>
-                            <button>Buy Now</button>
-                        </div>
-
-                        <div class="product">
-                            <div class="khung">
-                                <img
-                                    src="https://cdn2.cellphones.com.vn/x358,webp,q100/media/catalog/product/s/a/samsung-galaxy-20-fe_4_.jpg">
-                            </div>
-                            <h4>Galaxy S20 FE</h4>
-                            <p>Giá: 8.790.000 VNĐ</p>
-                            <button>Buy Now</button>
-                        </div>
-
-                        <div class="product">
-                            <div class="khung">
-                                <img
-                                    src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/s/m/sm-s908_galaxys22ultra_front_burgundy_211119.jpg">
-                            </div>
-                            <h4>Samsung S22 </h4>
-                            <p>Giá: 16.490.000 VNĐ</p>
-                            <button>Buy Now</button>
-                        </div>
-
-                        <div class="product">
-                            <div class="khung">
-                                <img
-                                    src="https://cdn2.cellphones.com.vn/x358,webp,q100/media/catalog/product/s/a/samsung_galaxy_z_flip_m_i_2022-1_1.jpg">
-                            </div>
-                            <h4>GalaxyZFlip4</h4>
-                            <p>Giá:17.270.000 VNĐ</p>
-                            <button>Buy Now</button>
-                        </div>
-
-                        <!-- carousel for xiaomi  -->
-                        <div id="carouselExample" class="carousel slide">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="/images/xiaomi/xiaomi_1786x986.JPG"
-                                        class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="/images/xiaomi/xiaomi_1787x921.JPG"
-                                        class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="/images/xiaomi/xiaomi_1794x923.JPG"
-                                        class="d-block w-100" alt="...">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev"
-                                type="button"
-                                data-bs-target="#carouselExample"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"
-                                    aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next"
-                                type="button"
-                                data-bs-target="#carouselExample"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon"
-                                    aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                        <!-- 5 product of xiaomi -->
-                        <div class="content">
-                            <div class="container">
-                                <h2> XIAOMI</h2>
-                            </div>
-
-
-                        </div>
-
-
-                    </div>
-
-                    <div class="select">
-                        <div class="product">
-                            <div class="khung">
-                                <img
-                                    src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/g/t/gtt_7766_3__1.jpg">
-                            </div>
-                            <h4>Redmi Note 12</h4>
-                            <p>Giá: 4.490.000 VNĐ</p>
-                            <button>Buy Now</button>
-                        </div>
-                        <div class="product">
-                            <div class="khung">
-                                <img
-                                    src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/4/_/4_187_1.jpg">
-                            </div>
-                            <h4>iPhone 11 </h4>
-                            <p>Giá: 11.950.000 VNĐ</p>
-                            <button>Buy Now</button>
-                        </div>
-                        <div class="product">
-                            <div class="khung">
-                                <img
-                                    src="https://cdn2.cellphones.com.vn/x358,webp,q100/media/catalog/product/3/_/3_225.jpg">
-                            </div>
-                            <h4>Phone 11 256GB</h4>
-                            <p>Giá: 10.290.000 VNĐ</p>
-                            <button>Buy Now</button>
-                        </div>
-
-                        <div class="product">
-                            <div class="khung">
-                                <img
-                                    src="https://cdn2.cellphones.com.vn/x358,webp,q100/media/catalog/product/i/p/iphone-14-storage-select-202209-6-1inch-y889.jpg">
-                            </div>
-                            <h4> Reno8 T 5G</h4>
-                            <p>Giá: 9.990.000 VNĐ</p>
-                            <button>Buy Now</button>
-                        </div>
-                        <div class="product">
-                            <div class="khung">
-                                <img
-                                    src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/n/2/n2_flip_-_combo_product_-_black.png">
-                            </div>
-                            <h4>OPPOFindN2Flip</h4>
-                            <p>Giá: 19.990.000 VNĐ</p>
-                            <button>Buy Now</button>
-                        </div>
-                    </div>
-                    <!-- product in sale -->
-                    <div class="content">
-                        <div class="container">
-                            <h2>TOP PRODUCT DISCOUNT</h2>
-                        </div>
-                        <div class="select">
-                            <div class="product">
-                                <div class="khung">
-                                    <img
-                                        src="https://cdn2.cellphones.com.vn/x358,webp,q100/media/catalog/product/1/_/1_66_6_2_1_12.jpg">
-                                </div>
-                                <h4>iPhone13ProMax</h4>
-                                <p>Giá: 26.990.000 VNĐ</p>
-                                <button>Buy Now</button>
-                            </div>
-                            <div class="product">
-                                <div class="khung">
-                                    <img
-                                        src="https://cdn2.cellphones.com.vn/x358,webp,q100/media/catalog/product/t/_/t_i_xu_ng_2_18.png">
-                                </div>
-                                <h4>RedmiNote11Pro</h4>
-                                <p>Giá: 5.790.000 VNĐ</p>
-                                <button>Buy Now</button>
-                            </div>
-                            <div class="product">
-                                <div class="khung">
-                                    <img
-                                        src="https://cdn2.cellphones.com.vn/x358,webp,q100/media/catalog/product/r/e/real_me_pro_002.jpg">
-                                </div>
-                                <h4>Realme 9 Pro</h4>
-                                <p>Giá:4.590.000 VNĐ</p>
-                                <button>Buy Now</button>
-                            </div>
-
-
-                            <div class="product">
-                                <div class="khung">
-                                    <img
-                                        src="https://cdn2.cellphones.com.vn/x358,webp,q100/media/catalog/product/0/9/0989_4_.jpg">
-                                </div>
-                                <h4>TecnoSpark10 </h4>
-                                <p>Giá: 3.590.000 VNĐ</p>
-                                <button>Buy Now</button>
-                            </div>
-                            <div class="product">
-                                <div class="khung">
-                                    <img
-                                        src="https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/2/_/2_282.jpg">
-                                </div>
-                                <h4>vivo Y35</h4>
-                                <p>Giá: 5.790.000 VNĐ</p>
-                                <button>Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Footer -->
-                    <div class="share">
-                        <a href="transistion.html">DISCOVERY</a>
-                        <a href="#">PRODUCT</a>
-                        <a href="#">CONTACT</a>
-                        <a href="#">SHOP</a>
-                    </div>
-                </div>
-            </div>
+        <div class="phone__content samsung">
+          <img src="images/main_brands/logo_brand/samsunglogo.png" alt="" class="samsung" />
+          <a href="">
+            <button>SHOP NOW</button>
+          </a>
         </div>
+      </div>
+      <!-- OPPO -->
+      <div class="main__phone" data-aos="fade-right" data-aos-delay="300">
+        <div class="phone__img oppo">
+          <img src="images/main_brands/oppo_n2_flip-transparent-resize.png" alt="" class="oppo default" />
+          <img src="images/main_brands/oppo_model_resize.png" alt="" class="oppo hover" />
+        </div>
+
+        <div class="phone__content oppo">
+          <img src="images/main_brands/logo_brand/oppo.logo.png" alt="" class="oppo" />
+          <a href="">
+            <button>SHOP NOW</button>
+          </a>
+        </div>
+      </div>
+      <!-- Xiaomi -->
+      <div class="main__phone" data-aos="fade-left">
+        <div class="phone__img xiaomi">
+          <img src="images/main_brands/xiaomi-13-ultra-transparent.png" alt="" class="xiaomi default" />
+          <img src="images/main_brands/11-pro-plus-blue-resize.png" alt="" class="xiaomi hover" />
+        </div>
+
+        <div class="phone__content xiaomi">
+          <img src="images/main_brands/logo_brand/xiaomi_logo.png" alt="" class="xiaomi" width="220px" height="150px" />
+          <a href="">
+            <button>SHOP NOW</button>
+          </a>
+        </div>
+      </div>
+      <!-- Sony -->
+      <div class="main__phone" data-aos="fade-right">
+        <div class="phone__img sony">
+          <img src="images/main_brands/sony_xperia_resize.png" alt="" class="sony default" />
+          <img src="images/main_brands/Sony-Xperia-10-transparent.png" alt="" class="sony hover" />
+        </div>
+
+        <div class="phone__content sony">
+          <img src="images/main_brands/logo_brand/sony_logo.png" alt="" class="sony" width="220px" height="150px" />
+          <a href="">
+            <button>SHOP NOW</button>
+          </a>
+        </div>
+      </div>
+      <!-- Other -->
+      <div class="main__phone other" data-aos="fade-left" data-aos-delay="300">
+        <a href="">
+          <img src="images/main_brands/logo_brand/gitchgitch-bold-italic.png" alt="" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ?-------------------@ Product below 200  @ ------------------------------------------------------------------->
+
+  <section class="section latest__products" id="latest">
+    <div class="title__container">
+      <div class="section__title active" data-id="Latest Products">
+        <span class="dot"></span>
+        <h1 class="primary__title">Product under 200$</h1>
+      </div>
     </div>
 
-    <!-- ======= Footer ======= -->
-<footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-  
-          <div class="col-lg-3 col-md-6">
-            <!-- bắt đầu cột 1 man hinh lớn thì chia 4 cột màn hình vừa chia 2 cột -->
-            <div class="footer-info">
-              <h3>Franky Phones<span>.</span></h3>
-              <p class="mb-2"> 
-                <!-- mb-2 nghĩa là margin bottom trong botstrap -->
-                391A Nam Ky Khoi Nghia <br>
-                HCM, VietNam<br>
-                <strong>Phone:</strong> +84 555 5568 68 <br>
-                <strong>Email:</strong> tram_kem@gmail.com<br>
-              </p>
-              <!-- tới phần phương thức thanh toán của cột 1 -->
-              <div class="payment-method mt-4">
-                <h4><strong>Phuong Thuc Thanh Toan</strong></h4>
-                <a href="" class="zalopay"><img src="assets/img/payment/zalopay-logo.png" alt="zalopay"></a>
-                <a href="" class="vnpay"><img src="assets/img/payment/vnpay-logo.png" alt="vnpay"></a>
-                <a href="" class="grabpay"><img src="assets/img/payment/moca-logo.png" alt="grabpay"></a>
+    <div class="container" data-aos="fade-up" data-aos-duration="1500">
+      <div class="glide" id="glide_2">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides latest-center">
+            <!--? Star image 1 -->
+            <li class="glide__slide">
+              <div class="product">
+                <div class="product__header">
+                  <img src="/images/products/iPhone/iphone6.jpeg" alt="product" />
+                </div>
+                <div class="product__footer">
+                  <h3>Apple iPhone 11</h3>
+                  <div class="rating">
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-empty"></use>
+                    </svg>
+                  </div>
+                  <div class="product__price">
+                    <h4>$750</h4>
+                  </div>
+                  <a href="#"><button type="submit" class="product__btn">
+                      Add To Cart
+                    </button></a>
+                </div>
+                <ul>
+                  <li>
+                    <a data-tip="Quick View" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-eye"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a data-tip="Add To Wishlist" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a data-tip="Add To Compare" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-loop2"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <!-- tới phần social link  -->
-              <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <!-- ? End product 1 -->
+            </li>
+            <!-- End image 1 -->
+            <li class="glide__slide">
+              <div class="product">
+                <div class="product__header">
+                  <img src="" alt="" />
+                </div>
               </div>
-            </div>
-          </div>
-            <!-- Qua cột thứ 2 (cột 2 và 3 cùng class)  -->
-          <div class="col-lg-3 col-md-6 footer-links ">
-            <br><br><br>
-            <h4>Mua Hang</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Mua hang va thanh toan online</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Tra thong tin don hang</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Tra diem thanh vien</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Xem uu dai thanh vien</a></li>
-            </ul>
-          </div>
-            <!-- Qua cột thứ 3 -->
-          <div class="col-lg-3 col-md-6 footer-links">
-            <br><br><br>
-            <h4>Bao hanh</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Tra thong tin bao hanh</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Trung tam bao hanh</a></li>
-            </ul>
-          </div>
-          <!-- Qua cột thứ 4 -->
-          <div class="col-lg-3 col-md-6 footer-newsletter">
-            <br><br><br>
-            <h4>Dang ky nhan thong tin khuyen mai</h4>
-            <p>Tin tuc khuyen mai va cong nghe duoc gui den email ban dang ky </p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-  
-          </div>
-  
+              <div class="product__footer">
+                <h3></h3>
+                <div class="rating"></div>
+              </div>
+            </li>
+
+            <!--  -->
+            <li class="glide__slide">
+              <div class="product">
+                <div class="product__header">
+                  <img src="/images/products/sumsung/samsung5.jpeg" alt="product" />
+                </div>
+                <div class="product__footer">
+                  <h3>Samsung Galaxy</h3>
+                  <div class="rating">
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-empty"></use>
+                    </svg>
+                  </div>
+                  <div class="product__price">
+                    <h4>$900</h4>
+                  </div>
+                  <a href="#">
+                    <button type="submit" class="product__btn">
+                      Add To Cart
+                    </button>
+                  </a>
+                </div>
+                <ul>
+                  <li>
+                    <a data-tip="Quick View" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-eye"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a data-tip="Add To Wishlist" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a data-tip="Add To Compare" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-loop2"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <!-- END -->
+            <li class="glide__slide">
+              <div class="product">
+                <div class="product__header">
+                  <img src="/images/products/headphone/headphone4.jpeg" alt="product" />
+                </div>
+                <div class="product__footer">
+                  <h3>Sony WH-CH510</h3>
+                  <div class="rating">
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-empty"></use>
+                    </svg>
+                  </div>
+                  <div class="product__price">
+                    <h4>$600</h4>
+                  </div>
+                  <a href="#"><button type="submit" class="product__btn">
+                      Add To Cart
+                    </button></a>
+                </div>
+                <ul>
+                  <li>
+                    <a data-tip="Quick View" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-eye"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a data-tip="Add To Wishlist" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a data-tip="Add To Compare" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-loop2"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="glide__slide">
+              <div class="product">
+                <div class="product__header">
+                  <img src="/images/products/sumsung/samsung3.jpeg" alt="product" />
+                </div>
+                <div class="product__footer">
+                  <h3>Samsung Galaxy</h3>
+                  <div class="rating">
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-empty"></use>
+                    </svg>
+                  </div>
+                  <div class="product__price">
+                    <h4>$850</h4>
+                  </div>
+                  <a href="#"><button type="submit" class="product__btn">
+                      Add To Cart
+                    </button></a>
+                </div>
+                <ul>
+                  <li>
+                    <a data-tip="Quick View" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-eye"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a data-tip="Add To Wishlist" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a data-tip="Add To Compare" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-loop2"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="glide__slide">
+              <div class="product">
+                <div class="product__header">
+                  <img src="./images/products/iPhone/iphone2.jpeg" alt="product" />
+                </div>
+                <div class="product__footer">
+                  <h3>Apple iPhone 11</h3>
+                  <div class="rating">
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-empty"></use>
+                    </svg>
+                  </div>
+                  <div class="product__price">
+                    <h4>$450</h4>
+                  </div>
+                  <a href="#"><button type="submit" class="product__btn">
+                      Add To Cart
+                    </button></a>
+                </div>
+                <ul>
+                  <li>
+                    <a data-tip="Quick View" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-eye"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a data-tip="Add To Wishlist" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a data-tip="Add To Compare" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-loop2"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="glide__slide">
+              <div class="product">
+                <div class="product__header">
+                  <img src="images/products/headphone/headphone2.jpeg" alt="product" />
+                </div>
+                <div class="product__footer">
+                  <h3>Sony WH-CH510</h3>
+                  <div class="rating">
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-empty"></use>
+                    </svg>
+                  </div>
+                  <div class="product__price">
+                    <h4>$300</h4>
+                  </div>
+                  <a href="#"><button type="submit" class="product__btn">
+                      Add To Cart
+                    </button></a>
+                </div>
+                <ul>
+                  <li>
+                    <a data-tip="Quick View" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-eye"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a data-tip="Add To Wishlist" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a data-tip="Add To Compare" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-loop2"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="glide__slide">
+              <div class="product">
+                <div class="product__header">
+                  <img src="images/products/sumsung/samsung1.jpeg" alt="product" />
+                </div>
+                <div class="product__footer">
+                  <h3>Samsung Galaxy</h3>
+                  <div class="rating">
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-empty"></use>
+                    </svg>
+                  </div>
+                  <div class="product__price">
+                    <h4>$300</h4>
+                  </div>
+                  <a href="#"><button type="submit" class="product__btn">
+                      Add To Cart
+                    </button></a>
+                </div>
+                <ul>
+                  <li>
+                    <a data-tip="Quick View" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-eye"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a data-tip="Add To Wishlist" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a data-tip="Add To Compare" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-loop2"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="glide__slide">
+              <div class="product">
+                <div class="product__header">
+                  <img src="images/products/headphone/headphone1.jpeg" alt="product" />
+                </div>
+                <div class="product__footer">
+                  <h3>Sony WH-CH510</h3>
+                  <div class="rating">
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-empty"></use>
+                    </svg>
+                  </div>
+                  <div class="product__price">
+                    <h4>$250</h4>
+                  </div>
+                  <a href="#"><button type="submit" class="product__btn">
+                      Add To Cart
+                    </button></a>
+                </div>
+                <ul>
+                  <li>
+                    <a data-tip="Quick View" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-eye"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a data-tip="Add To Wishlist" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a data-tip="Add To Compare" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-loop2"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="glide__slide">
+              <div class="product">
+                <div class="product__header">
+                  <img src="images/products/iPhone/iphone1.jpeg" alt="product" />
+                </div>
+                <div class="product__footer">
+                  <h3>Apple iPhone XR</h3>
+                  <div class="rating">
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#icon-star-empty"></use>
+                    </svg>
+                  </div>
+                  <div class="product__price">
+                    <h4>$550</h4>
+                  </div>
+                  <a href="#"><button type="submit" class="product__btn">
+                      Add To Cart
+                    </button></a>
+                </div>
+                <ul>
+                  <li>
+                    <a data-tip="Quick View" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-eye"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a data-tip="Add To Wishlist" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a data-tip="Add To Compare" data-place="left" href="#">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#icon-loop2"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            <svg>
+              <use xlink:href="./images/sprite.svg#icon-arrow-left2"></use>
+            </svg>
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            <svg>
+              <use xlink:href="./images/sprite.svg#icon-arrow-right2"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
-  
+  </section>
+
+  <!-- <section class="category__section section" id="category">
+        <div class="tab__list">
+          <div class="title__container tabs">
+
+            <div class="section__titles category__titles ">
+              <div class="section__title filter-btn active" data-id="All Products">
+                <span class="dot"></span>
+                <h1 class="primary__title">All Products</h1>
+              </div>
+            </div>
+
+            <div class="section__titles">
+              <div class="section__title filter-btn" data-id="Trending Products">
+                <span class="dot"></span>
+                <h1 class="primary__title">Trending Products</h1>
+              </div>
+            </div>
+
+            <div class="section__titles">
+              <div class="section__title filter-btn" data-id="Special Products">
+                <span class="dot"></span>
+                <h1 class="primary__title">Special Products</h1>
+              </div>
+            </div>
+
+            <div class="section__titles">
+              <div class="section__title filter-btn" data-id="Featured Products">
+                <span class="dot"></span>
+                <h1 class="primary__title">Featured Products</h1>
+              </div>
+            </div>
+
+          </div>
+        </div> -->
+
+  <!------------------------------------- Pre-order Iphone 15 -------------------------------------------------------------->
+
+  <div class="container">
+    <div class="container__gif" data-aos="zoom-in-up" data-aos-delay="300" data-aos-duration="2000">
+      <div class="gifWrapper">
+        <div class="gifContent">
+          <img src="images/gif/Introducing_iPhone_14_Pro.gif" alt="" />
+        </div>
+
+        <div class="gifText">
+          <div class="gifHeader">
+            <h1>Pre-order Iphone 15</h1>
+          </div>
+          <p>
+            The iPhone 15 is set to revolutionize the way you connect, create,
+            and explore. Be at the forefront of this technological marvel by
+            pre-ordering now. Don't miss your chance to own the future of
+            mobile technology – reserve your iPhone 15 today!
+          </p>
+          <div class="gif__click">
+            <a href="#">
+              <i></i>
+              Order Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- -------------------------------- phần video giơi thiêu -------------------------------------------------------- -->
+  <div class="container">
+    <!-- Video introduce -->
+    <div id="carouselExample" class="carousel slide" data-aos="zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300">
+      <video autoplay muted loop width="100%" height="auto">
+        <source src="video/iphone_introduce.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+  </div>
+  <!--* kết thúc phần video giới thiệu -->
+
+  <!-- ? -------------------------Facility Section------------------------- -->
+  <section class="facility__section section" id="facility">
     <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>The Franky</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        Designed by <a href="#">AptechFPT</a>
+      <div class="facility__contianer" data-aos="fade-up" data-aos-duration="1200">
+        <div class="facility__box">
+          <div class="facility-img__container">
+            <svg>
+              <use xlink:href="./images/sprite.svg#icon-airplane"></use>
+            </svg>
+          </div>
+          <p>FREE SHIPPING WORLD WIDE</p>
+        </div>
+
+        <div class="facility__box">
+          <div class="facility-img__container">
+            <svg>
+              <use xlink:href="./images/sprite.svg#icon-credit-card-alt"></use>
+            </svg>
+          </div>
+          <p>100% MONEY BACK GUARANTEE</p>
+        </div>
+
+        <div class="facility__box">
+          <div class="facility-img__container">
+            <svg>
+              <use xlink:href="./images/sprite.svg#icon-credit-card"></use>
+            </svg>
+          </div>
+          <p>MANY PAYMENT GATWAYS</p>
+        </div>
+
+        <div class="facility__box">
+          <div class="facility-img__container">
+            <svg>
+              <use xlink:href="./images/sprite.svg#icon-headphones"></use>
+            </svg>
+          </div>
+          <p>24/7 ONLINE SUPPORT</p>
+        </div>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </section>
 
+  <!-- ?------------------------Testimonial Section-------------------------- -->
+  <section class="section testimonial" id="testimonial">
+    <div class="testimonial__container">
+      <div class="glide" id="glide_4">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <div class="testimonial__box">
+                <div class="client__image">
+                  <img src="./images/profile1.jpg" alt="profile" />
+                </div>
+                <p>
+                  Trải nghiệm của tôi với dịch vụ khách hàng của công ty XYZ
+                  thực sự là một trải nghiệm tuyệt vời. Ngay từ lần đầu tiên
+                  liên hệ, tôi đã được đón tiếp một cách chuyên nghiệp và thân
+                  thiện. Nhân viên dịch vụ khách hàng đã lắng nghe mọi yêu cầu
+                  của tôi và giải đáp mọi thắc mắc một cách rõ ràng và chi
+                  tiết. Tôi cảm thấy mình được đặt lên hàng đầu và cảm thấy
+                  rất thoải mái khi giao tiếp với đội ngũ nhân viên tận tâm
+                  này.
+                </p>
+                <div class="client__info">
+                  <h3>Mr Trend</h3>
+                  <span>Khách hàng thân thiết</span>
+                </div>
+              </div>
+            </li>
+            <li class="glide__slide">
+              <div class="testimonial__box">
+                <div class="client__image">
+                  <img src="./images/profile2.jpg" alt="profile" />
+                </div>
+                <p>
+                  Dịch vụ chăm sóc khách hàng của công ty ABC thực sự xuất
+                  sắc. Tôi đã gặp phải một số vấn đề với sản phẩm của họ và đã
+                  liên hệ với bộ phận hỗ trợ khách hàng. Đội ngũ hỗ trợ không
+                  chỉ giải quyết vấn đề của tôi một cách nhanh chóng mà còn
+                  đảm bảo rằng tôi hiểu rõ quy trình và giải pháp được cung
+                  cấp. Họ luôn lắng nghe và đặt mình vào vị trí của khách hàng
+                  để đảm bảo rằng mọi vấn đề đều được giải quyết một cách toàn
+                  diện.
+                </p>
+                <div class="client__info">
+                  <h3>Ms.Julinn</h3>
+                  <span>Khách hàng thân thiếu</span>
+                </div>
+              </div>
+            </li>
+            <li class="glide__slide">
+              <div class="testimonial__box">
+                <div class="client__image">
+                  <img src="./images/profile3.jpg" alt="profile" />
+                </div>
+                <p>
+                  Trải nghiệm của tôi với dịch vụ khách hàng của công ty DEF
+                  là một điều đáng ngạc nhiên. Từ khi tôi bắt đầu sử dụng sản
+                  phẩm của họ, tôi đã nhận được sự hỗ trợ tuyệt vời từ đội ngũ
+                  chăm sóc khách hàng. Mỗi lần tôi liên hệ, tôi luôn nhận được
+                  câu trả lời nhanh chóng và chuyên nghiệp từ nhân viên. Họ
+                  luôn có tinh thần hợp tác và giải đáp mọi thắc mắc của tôi
+                  một cách toàn diện. Tôi cảm thấy mình được đối xử như một
+                  khách hàng đáng quý.
+                </p>
+                <div class="client__info">
+                  <h3>Tiến</h3>
+                  <span>Đại gia Apple</span>
+                </div>
+              </div>
+            </li>
+            <li class="glide__slide">
+              <div class="testimonial__box">
+                <div class="client__image">
+                  <img src="./images/profile4.jpg" alt="" />
+                </div>
+                <p>
+                  Dịch vụ khách hàng của công ty GHI thực sự là một điểm nổi
+                  bật. Tôi đã trải qua nhiều trải nghiệm với dịch vụ khách
+                  hàng từ các công ty khác nhau, nhưng công ty GHI vượt trội
+                  hơn hẳn. Nhân viên hỗ trợ khách hàng luôn thể hiện sự am
+                  hiểu về sản phẩm và dịch vụ của công ty, và họ rất n
+                </p>
+                <div class="client__info">
+                  <h3>Quốc Khánh</h3>
+                  <span>Thủ khoa APTECH</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+          <button class="glide__bullet" data-glide-dir="=0"></button>
+          <button class="glide__bullet" data-glide-dir="=1"></button>
+          <button class="glide__bullet" data-glide-dir="=2"></button>
+          <button class="glide__bullet" data-glide-dir="=3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--?-------------------------------New Section---------------------------------  -->
+  <section class="section news" id="news">
+    <div class="container">
+      <div class="title__container">
+        <div class="section__titles">
+          <div class="section__title active">
+            <span class="dot"></span>
+            <h1 class="primary__title">Phone News</h1>
+          </div>
+        </div>
+      </div>
+      <div class="news__container">
+        <div class="glide" id="glide_5">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <div class="new__card">
+                  <div class="card__header">
+                    <img src="./images/news1.jpg" alt="" />
+                  </div>
+                  <div class="card__footer">
+                    <h3>Styling White Shirts After A Cool Day</h3>
+                    <span>By Admin</span>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Illo praesentium, numquam non provident rem sed minus
+                      natus unde vel modi!
+                    </p>
+                    <a href="#"><button>Read More</button></a>
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="new__card">
+                  <div class="card__header">
+                    <img src="./images/news2.jpg" alt="" />
+                  </div>
+                  <div class="card__footer">
+                    <h3>Styling White Shirts After A Cool Day</h3>
+                    <span>By Admin</span>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Illo praesentium, numquam non provident rem sed minus
+                      natus unde vel modi!
+                    </p>
+                    <a href="#"><button>Read More</button></a>
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="new__card">
+                  <div class="card__header">
+                    <img src="./images/news3.jpg" alt="" />
+                  </div>
+                  <div class="card__footer">
+                    <h3>Styling White Shirts After A Cool Day</h3>
+                    <span>By Pham Anh Vu</span>
+                    <p>Tiêu đề 1</p>
+                    <a href="#"><button>Read More</button></a>
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="new__card">
+                  <div class="card__header">
+                    <img src="./images/news4.jpg" alt="" />
+                  </div>
+                  <div class="card__footer">
+                    <h3>Styling White Shirts After A Cool Day</h3>
+                    <span>By Pham Dac An</span>
+                    <p>Tiêu đề 2</p>
+                    <a href="#"><button>Read More</button></a>
+                  </div>
+                </div>
+              </li>
+              <li class="glide__slide">
+                <div class="new__card">
+                  <div class="card__header">
+                    <img src="./images/news5.jpg" alt="" />
+                  </div>
+                  <div class="card__footer">
+                    <h3>Styling White Shirts After A Cool Day</h3>
+                    <span>By Huynh Tuan Duy</span>
+                    <p></p>
+                    <a href="#"><button>Read More</button></a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--?--------------------------- NewsLetter--------------------------------------------- -->
+  <section class="section newsletter" id="contact">
+    <div class="container">
+      <div class="newsletter__content">
+        <div class="newsletter__data">
+          <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
+          <p>
+            A short sentence describing what someone will receive by
+            subscribing
+          </p>
+        </div>
+        <form action="#">
+          <input type="email" placeholder="Enter your email address" class="newsletter__email" id="email" />
+          <a id="subss" class="newsletter__link" href="#" onclick="checkSubmit()">subscribe</a>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- TODO-------------------@ End Main @-------------------------- -->
+  <!-- !-----------Footer------------- -->
+  <div id="footer-container"></div>
+  <!-- !-----------Footer------------- -->
+  <a href="#header" class="goto-top scroll-link">
+    <svg>
+      <use xlink:href="./images/sprite.svg#icon-arrow-up"></use>
+    </svg>
+  </a>
+
+  <!-- Glide Carousel Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+  <!-- Animate On Scroll -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script src="js/detail.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/product.js"></script>
 </body>
 
 </html>

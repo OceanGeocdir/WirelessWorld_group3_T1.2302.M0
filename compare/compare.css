@@ -1,0 +1,140 @@
+iframe {
+    height: 66px;
+    position: fixed;
+    top: 0;
+    background-color: rgb(188, 188, 188);
+}
+
+h1 {
+    margin-top: 100px;
+}
+
+.compare {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.compare__table {
+    width: 95%;
+    max-width: 1400px;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+/* ? -------------------------------------------- phần chọn sản phẩm so sánh */
+.infor_product.select {
+    border-bottom: 1px solid #a5a3a3;
+}
+
+.infor_product .form-control {
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+/* ? ---------------------------------------------phần thông tin so sánh */
+.infor_product {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    gap: 10px;
+}
+
+.infor_product h6 {
+    padding-left: 10px;
+    margin-bottom: 0;
+}
+
+.infor_product img {
+    width: 280px;
+    height: 300px;
+}
+
+.infor_product.color {
+    background: rgb(246, 246, 246);
+}
+
+/* 
+!   ==========================
+!   RESPONSIVE
+!   ==========================
+*/
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .infor_product img {
+        width: 200px;
+        height: 250px;
+    }
+
+    .infor_product .form-control {
+        width: 200px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .infor_product img {
+        width: 150px;
+        height: 200px;
+    }
+
+    .infor_product .form-control {
+        width: 150px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .infor_product {
+        font-size: 0.8rem;
+        grid-template-columns: repeat(4, 20%);
+        gap: 30px;
+    }
+
+    .infor_product img {
+        width: 100px;
+        height: 150px;
+    }
+
+    .infor_product .form-control {
+        width: 110px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+    .compare__table {
+        padding: 20px 5px;
+    }
+
+    .infor_product {
+        grid-template-columns: repeat(3, 30%);
+        gap: 5px;
+        font-size: 10px;
+    }
+
+    .infor_product .form-control.end {
+        display: none;
+    }
+
+    .infor_product .form-control {
+        width: 90px;
+    }
+
+    .infor_product .end {
+        display: none;
+    }
+
+    .infor_product img {
+        width: 80px;
+        height: 130px;
+    }
+
+    .infor_product h4, h5 {
+        font-size: 15px;
+    }
+
+    .infor_product h6 {
+        font-size: 12px;
+    }
+}

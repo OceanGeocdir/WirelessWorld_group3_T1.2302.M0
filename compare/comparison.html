@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- ! bootstrap   -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <!-- !CSS -->
+    <link rel="stylesheet" href="compare.css">
+</head>
+
+<body>
+    <!--?-------@ Header @------------>
+    <div id="header-container"></div>
+    <!--?-------@ Header @------------>
+
+    <!-- <iframe src="../header.html" frameborder="0" width="100%" scrolling="no"></iframe> -->
+
+
+    <h1 class="display-5 my-5 text-center">Compare Page</h1>
+
+    <div class="compare">
+        <div class="compare__table">
+            <!--! Select -->
+            <div class="infor_product select" style="margin-bottom: 40px;">
+                <h4>Select Product</h4>
+                <div>
+                    <select class="form-control" id="select1" onchange="item1(this.value)">
+                        <option value="0">-- Select Anyone --</option>
+                    </select>
+                </div>
+                <div>
+                    <select class="form-control" id="select2" onchange="item2(this.value)">
+                        <option value="0">-- Select Anyone --</option>
+                    </select>
+                </div>
+                <div>
+                    <select class="form-control end" id="select3" onchange="item3(this.value)">
+                        <option value="0">-- Select Anyone --</option>
+                    </select>
+                </div>
+            </div>
+            <!--! Image -->
+            <div class="infor_product" style="margin-bottom: 40px;">
+                <h4>Product Image</h4>
+                <div>
+                    <img src="comparison/No-Image-Placeholder.svg.png" id="img1" alt>
+                </div>
+                <div>
+                    <img src="comparison/No-Image-Placeholder.svg.png" id="img2" alt>
+                </div>
+                <div class="end">
+                    <img src="comparison/No-Image-Placeholder.svg.png" id="img3" alt>
+                </div>
+            </div>
+
+            <!-- ! Brand -->
+            <div class="infor_product" style="margin-bottom: 40px;">
+                <h4>Product brand</h4>
+                <div id="brand1">N/A</div>
+                <div id="brand2">N/A</div>
+                <div class="end" id="brand3">N/A</div>
+            </div>
+
+            <!--! Display -->
+            <div class="infor_product">
+                <h5>DISPLAY</h5>
+            </div>
+            <div class="infor_product color">
+                <h6>Size:</h6>
+                <div id="size1">N/A</div>
+                <div id="size2">N/A</div>
+                <div class="end" id="size3">N/A</div>
+            </div>
+            <div class="infor_product" style="margin-bottom: 25px;">
+                <h6>Technology:</h6>
+                <div id="tech1">N/A</div>
+                <div id="tech2">N/A</div>
+                <div class="end" id="tech3">N/A</div>
+            </div>
+
+            <!--! Hardware -->
+            <div class="infor_product">
+                <h5>HARDWARE</h5>
+            </div>
+            <div class="infor_product color">
+                <h6>System chip:</h6>
+                <div id="chip1">N/A</div>
+                <div id="chip2">N/A</div>
+                <div class="end" id="chip3">N/A</div>
+            </div>
+            <div class="infor_product">
+                <h6>Internal Storage:</h6>
+                <div id="storage1">N/A</div>
+                <div id="storage2">N/A</div>
+                <div class="end" id="storage3">N/A</div>
+            </div>
+            <div class="infor_product color" style="margin-bottom: 25px;">
+                <h6>OS:</h6>
+                <div id="os1">N/A</div>
+                <div id="os2">N/A</div>
+                <div class="end" id="os3">N/A</div>
+            </div>
+
+            <!--! BATTERY -->
+            <div class="infor_product">
+                <h5>BATTERY</h5>
+            </div>
+            <div class="infor_product color" style="margin-bottom: 25px;">
+                <h6>Charging:</h6>
+                <div id="charg1">N/A</div>
+                <div id="charg2">N/A</div>
+                <div class="end" id="charg3">N/A</div>
+            </div>
+
+            <!--! Camera -->
+            <div class="infor_product">
+                <h5>CAMERA</h5>
+            </div>
+            <div class="infor_product color">
+                <h6>Main camera:</h6>
+                <div id="camera1">N/A</div>
+                <div id="camera2">N/A</div>
+                <div class="end" id="camera3">N/A</div>
+            </div>
+            <div class="infor_product" style="margin-bottom: 25px;">
+                <h6>Front camera:</h6>
+                <div id="fcam1">N/A</div>
+                <div id="fcam2">N/A</div>
+                <div class="end" id="fcam3">N/A</div>
+            </div>
+
+            <!-- ! Design -->
+            <div class="infor_product">
+                <h5>DESIGN</h5>
+            </div>
+            <div class="infor_product color" style="margin-bottom: 25px;">
+                <h6>Color:</h6>
+                <div id="color1">N/A</div>
+                <div id="color2">N/A</div>
+                <div class="end" id="color3">N/A</div>
+            </div>
+
+            <!-- ! Buy -->
+            <div class="infor_product">
+                <h4>BUYER INFORMATION</h4>
+            </div>
+            <div class="infor_product color" style="margin-bottom: 10px;">
+                <h6>Price:</h6>
+                <div id="price1">N/A</div>
+                <div id="price2">N/A</div>
+                <div class="end" id="price3">N/A</div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- ! Footer -->
+    <div id="footer-container"></div>
+    <!-- ! Footer -->
+
+    <!-- Custom JavaScript -->
+
+    <script src="/js/script.js">
+
+    </script>
+
+    <script src="data.js"></script>
+    <script src="compare.js"></script>
+
+</body>
+
+</html>

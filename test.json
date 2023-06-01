@@ -1,0 +1,84 @@
+{
+  "products": [
+    {
+      "title": "Apple iPhone XR",
+      "price": "$250.99",
+      "rating": 4,
+      "reviewCount": 3,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt a doloribus iste natus et facere?",
+      "colors": ["blue", "red"],
+      "sizes": [6.65, 7.5],
+      "subtotal": "$250.99",
+      "brand": "Apple",
+      "productType": "Phone",
+      "availability": "In Stock (7 Items)",
+      "image": "path/to/main/image.jpg",
+      "images": [
+        "path/to/image_1.jpg",
+        "path/to/image_2.jpg",
+        "path/to/image_3.jpg",
+        "path/to/image_4.jpg"
+      ]
+    },
+    {
+      "title": "Product 2",
+      "price": "$100.00",
+      "rating": 3,
+      "reviewCount": 2,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt a doloribus iste natus et facere?",
+      "colors": ["green", "yellow"],
+      "sizes": [8.0, 9.0],
+      "subtotal": "$100.00",
+      "brand": "Brand 2",
+      "productType": "Type 2",
+      "availability": "In Stock (5 Items)",
+      "image": "path/to/main/image2.jpg",
+      "images": [
+        "path/to/image2_1.jpg",
+        "path/to/image2_2.jpg",
+        "path/to/image2_3.jpg",
+        "path/to/image2_4.jpg"
+      ]
+    },
+    {
+      "title": "Product 3",
+      "price": "$150.00",
+      "rating": 5,
+      "reviewCount": 10,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt a doloribus iste natus et facere?",
+      "colors": ["black", "white"],
+      "sizes": [7.0, 8.0],
+      "subtotal": "$150.00",
+      "brand": "Brand 3",
+      "productType": "Type 3",
+      "availability": "In Stock (3 Items)",
+      "image": "path/to/main/image3.jpg",
+      "images": [
+        "path/to/image3_1.jpg",
+        "path/to/image3_2.jpg",
+        "path/to/image3_3.jpg",
+        "path/to/image3_4.jpg"
+      ]
+    },
+    {
+      "title": "Product 4",
+      "price": "$75.00",
+      "rating": 2,
+      "reviewCount": 5,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt a doloribus iste natus et facere?",
+      "colors": ["purple", "orange"],
+      "sizes": [6.0, 7.0],
+      "subtotal": "$75.00",
+      "brand": "Brand 4",
+      "productType": "Type 4",
+      "availability": "In Stock (9 Items)",
+      "image": "path/to/main/image4.jpg",
+      "images": [
+        "path/to/image4_1.jpg",
+        "path/to/image4_2.jpg",
+        "path/to/image4_3.jpg",
+        "path/to/image4_4.jpg"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script src="/angular.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+
+    <!-- Carousel -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css" />
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css" />
+
+    <!-- Animate On Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Phone Shop</title>
+</head>
+
+<body ng-app="myApp">
+    <!--!---------------@ Header @----------------->
+    <div id="header-container"></div>
+    <!--!--------------@ Header @----------------->
+    <header id="header" class="header">
+        <div class="page__title-area">
+            <div class="container">
+                <div class="page__title-container">
+                    <ul class="page__titles">
+                        <li>
+                            <a href="/">
+                                <svg>
+                                    <use xlink:href="./images/sprite.svg#icon-home"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="page__title">Cart</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="section cart__area">
+            <div class="container">
+                <div class="responsive__cart-area">
+                    <form class="cart__form">
+                        <div class="cart__table table-responsive">
+                            <table width="100%" class="table">
+                                <thead>
+                                    <tr>
+                                        <th>PRODUCT</th>
+                                        <th>NAME</th>
+                                        <th>UNIT PRICE</th>
+                                        <th>QUANTITY</th>
+                                        <th>TOTAL</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="product__thumbnail">
+                                            <a href="#">
+                                                <img id="product-image" src="" alt="">
+                                            </a>
+                                        </td>
+                                        <td class="product__name">
+                                            <a href="#" id="product-title"></a>
+                                            <br><br>
+                                            <small id="product-color-size"></small>
+                                        </td>
+                                        <td class="product__price">
+                                            <div class="price">
+                                                <span class="new__price" id="product-price"></span>
+                                            </div>
+                                        </td>
+                                        <td class="product__quantity">
+                                            <div class="input-counter">
+                                                <div>
+                                                    <span class="minus-btn" id="minus-btn">
+                                                        <svg>
+                                                            <use xlink:href="./images/sprite.svg#icon-minus"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <input type="text" min="1" value="1" max="10" class="counter-btn"
+                                                        id="product-quantity">
+                                                    <span class="plus-btn" id="plus-btn">
+                                                        <svg>
+                                                            <use xlink:href="./images/sprite.svg#icon-plus"></use>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="product__subtotal">
+                                            <div class="price">
+                                                <span class="new__price" id="product-subtotal"></span>
+                                            </div>
+                                            <a href="#" class="remove__cart-item" id="remove-cart-item-link">
+                                                <svg>
+                                                    <use xlink:href="./images/sprite.svg#icon-trash"></use>
+                                                </svg>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="cart-btns">
+                            <div class="continue__shopping">
+                                <a href="product.html">Continue Shopping</a>
+                            </div>
+                            <div class="check__shipping">
+                                <input type="checkbox" id="shipping-checkbox">
+                                <span>Shipping(+7$)</span>
+                            </div>
+                        </div>
+
+                        <div class="cart__totals">
+                            <h3>Cart Totals</h3>
+                            <ul>
+                                <li>
+                                    Subtotal
+                                    <span class="new__price">$<span id="sub-total"></span></span>
+                                </li>
+                                <li>
+                                    Shipping
+                                    <span id="shipping-cost">$0.00</span>
+                                </li>
+                                <li>
+                                    Total
+                                    <span class="new__price" id="total"></span>
+                                </li>
+                            </ul>
+                            <a href="" onclick="openPopup()">PROCEED TO CHECKOUT</a>
+
+                        </div>
+
+                    </form>
+
+                </div>
+                <div class="container_popup">
+                    <div class="popup" id="popup">
+                        <img src="images/login/404-tick.png" alt="">
+                        <h2>Thank You!</h2>
+                        <p>Your product have been bought successfully !</p>
+                        <a href="index.html"><button type="button">OK</button></a>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+
+        <!-- Facility Section -->
+        <section class="facility__section section" id="facility">
+            <div class="container">
+                <div class="facility__contianer">
+                    <div class="facility__box">
+                        <div class="facility-img__container">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-airplane"></use>
+                            </svg>
+                        </div>
+                        <p>FREE SHIPPING WORLD WIDE</p>
+                    </div>
+
+                    <div class="facility__box">
+                        <div class="facility-img__container">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-credit-card-alt"></use>
+                            </svg>
+                        </div>
+                        <p>100% MONEY BACK GUARANTEE</p>
+                    </div>
+
+                    <div class="facility__box">
+                        <div class="facility-img__container">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-credit-card"></use>
+                            </svg>
+                        </div>
+                        <p>MANY PAYMENT GATWAYS</p>
+                    </div>
+
+                    <div class="facility__box">
+                        <div class="facility-img__container">
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-headphones"></use>
+                            </svg>
+                        </div>
+                        <p>24/7 ONLINE SUPPORT</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--!============== Footer ================-->
+    <div id="footer-container"></div>
+    <!--!============== Footer ================-->
+
+    <!-- End Footer -->
+
+    <!-- Go To -->
+
+    <a href="#header" class="goto-top scroll-link">
+        <svg>
+            <use xlink:href="./images/sprite.svg#icon-arrow-up"></use>
+        </svg>
+    </a>
+    <!-- script -->
+    <script>
+        // Lấy thông tin sản phẩm từ đường dẫn URL
+        function getProductIdFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('id');
+        }
+
+        // Lấy thông tin sản phẩm từ products.json
+        fetch('products.json')
+            .then(response => response.json())
+            .then(data => {
+                const products = data.products;
+                var matchedProduct = null;
+                const idFromHref = getProductIdFromURL(); // Lấy giá trị id từ đường dẫn URL
+
+                for (var i = 0; i < products.length; i++) {
+                    if (products[i].id == idFromHref) { // So sánh theo giá trị id
+                        matchedProduct = products[i];
+                        break;
+                    }
+                }
+
+                // Kiểm tra xem có sản phẩm được tìm thấy hay không
+                if (matchedProduct) {
+                    // Đổ dữ liệu từ JSON vào các phần tử HTML
+                    document.getElementById("product-image").src = matchedProduct.image;
+                    document.getElementById("product-title").textContent = matchedProduct.title;
+                    document.getElementById("product-color-size").textContent = matchedProduct.color[0] + ' / ' + matchedProduct.display_size[0];
+                    document.getElementById("product-price").textContent = "$" + matchedProduct.price.toFixed(2);
+                    document.getElementById("product-quantity").value = 1;
+                    updateSubtotal(matchedProduct.price, 1);
+
+                    // Cập nhật ID của sản phẩm vào href của thẻ <a> remove__cart-item
+                    document.getElementById("remove-cart-item-link").setAttribute("data-id", matchedProduct.id);
+                    document.getElementById("remove-cart-item-link").addEventListener("click", removeCartItem);
+
+                    // Thực hiện cộng và trừ đơn vị khi người dùng nhấn vào dấu "+" và "-"
+                    const quantityInput = document.getElementById("product-quantity");
+                    const plusBtn = document.getElementById("plus-btn");
+                    const minusBtn = document.getElementById("minus-btn");
+
+                    plusBtn.addEventListener('click', function () {
+                        let quantity = parseInt(quantityInput.value);
+                        quantity += 1;
+                        quantityInput.value = quantity;
+                        updateSubtotal(matchedProduct.price, quantity);
+                    });
+
+                    minusBtn.addEventListener('click', function () {
+                        let quantity = parseInt(quantityInput.value);
+                        if (quantity > 1) {
+                            quantity -= 1;
+                            quantityInput.value = quantity;
+                            updateSubtotal(matchedProduct.price, quantity);
+                        }
+                    });
+
+                    function updateSubtotal(price, quantity) {
+                        const subtotal = price * quantity;
+                        document.getElementById("product-subtotal").textContent = subtotal.toFixed(2);
+                        updateTotal(subtotal);
+                    }
+
+                    function updateTotal(subtotal) {
+                        const shippingCheckbox = document.getElementById("shipping-checkbox");
+                        const totalElement = document.getElementById("total");
+
+                        if (shippingCheckbox.checked) {
+                            const shippingCost = 7;
+                            const total = subtotal + shippingCost;
+                            document.getElementById("shipping-cost").textContent = "$" + shippingCost.toFixed(2);
+                            totalElement.textContent = "$" + total.toFixed(2);
+                        } else {
+                            document.getElementById("shipping-cost").textContent = "$0.00";
+                            totalElement.textContent = "$" + subtotal.toFixed(2);
+                        }
+                        const subtotalElement = document.getElementById("sub-total");
+                        subtotalElement.textContent = subtotal.toFixed(2);
+                    }
+
+                    const shippingCheckbox = document.getElementById("shipping-checkbox");
+                    shippingCheckbox.addEventListener('click', function () {
+                        const subtotal = parseFloat(document.getElementById("product-subtotal").textContent);
+                        updateTotal(subtotal);
+                    });
+                    //Remove CART
+                    function removeCartItem(event) {
+                        event.preventDefault();
+                        const productId = this.getAttribute("data-id");
+                        removeProductFromCart(productId);
+                        updateCart();
+                        alert("Product removed successfully!");
+                        window.location.href = "cart.html";
+                    }
+
+                    function removeProductFromCart(productId) {
+                        // Lấy giỏ hàng từ lưu trữ hoặc từ dữ liệu tạm thời trong trang
+                        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+                        // Tìm kiếm sản phẩm trong giỏ hàng dựa trên productId
+                        const index = cartItems.findIndex(item => item.productId === productId);
+
+                        // Nếu tìm thấy sản phẩm, xóa nó khỏi giỏ hàng
+                        if (index !== -1) {
+                            cartItems.splice(index, 1);
+                        }
+
+                        // Cập nhật lại giỏ hàng trong lưu trữ hoặc cập nhật dữ liệu tạm thời trong trang
+                        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                    }
+
+
+                    function updateCart() {
+                        let subtotal = 0;
+                        const productSubtotals = document.querySelectorAll(".product__subtotal .new__price");
+
+                        productSubtotals.forEach(function (subtotalElement) {
+                            subtotal += parseFloat(subtotalElement.textContent.substring(1));
+                        });
+
+                        const subtotalElement = document.getElementById("subtotal");
+                        subtotalElement.textContent = "$" + subtotal.toFixed(2);
+                    }
+
+                    updateCart();
+
+
+
+                } else {
+                    console.log("Không tìm thấy sản phẩm với ID đã cho.");
+                }
+            })
+            .catch(error => {
+                console.log("Đã xảy ra lỗi: ", error);
+            });
+
+        //POPUP CHO Ô PROCESS TO CHECK 
+        let popup = document.getElementById("popup");
+
+        function openPopup() {
+            popup.classList.add("open-popup")
+            //CSS add 
+        }
+
+        function closePopup() {
+            popup.classList.remove("open-popup");
+        }
+    </script>
+    <!-- Glide Carousel Script -->
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+
+    <!-- Animate On Scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/detail.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/product.js"></script>
+</body>
+
+</html>
