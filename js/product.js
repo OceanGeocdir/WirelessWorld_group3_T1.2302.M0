@@ -95,7 +95,7 @@ async function getProductData() {
         // Create the Compare list item and link
         const compareLi = document.createElement("li");
         const compareLink = document.createElement("a");
-        compareLink.href = "compare/comparison.html";
+        compareLink.href = "./comparison.html";
         compareLink.dataset.tip = "Add To Compare";
         compareLink.dataset.place = "left";
 
