@@ -29,11 +29,11 @@
       <div class="container">
         <nav class="nav">
           <div class="nav__hamburger">
-            <span><i class="fa-solid fa-bars"></i></span>
+            <span><i class="fa-solid fa-bars" style="color: #ffffff;"></i></span>
           </div>
 
           <div class="nav__logo">
-            <a href="/" class="scroll-link">G3SHOP</a>
+            <a href="/" class="scroll-link" style="color: #ffffff; font-weight: bold;">G3SHOP</a>
           </div>
 
           <div class="nav__menu">
@@ -45,16 +45,16 @@
             </div>
             <ul class="nav__list">
               <li class="nav__item">
-                <a href="/" class="nav__link scroll-link">Home</a>
+                <a href="/index.html" class="nav__link scroll-link">Home</a>
               </li>
               <li class="nav__item">
-                <a href="/" class="nav__link scroll-link">Product</a>
+                <a href="/product.html" class="nav__link scroll-link">Product</a>
               </li>
               <li class="nav__item">
-                <a href="/" class="nav__link scroll-link">blog</a>
+                <a href="/aboutus.html" class="nav__link scroll-link">about</a>
               </li>
               <li class="nav__item">
-                <a href="/" class="nav__link scroll-link">comparison</a>
+                <a href="/comparison.html" class="nav__link scroll-link">comparison</a>
               </li>
             </ul>
           </div>
@@ -64,13 +64,9 @@
               <i class="fa-solid fa-user fa-2xs text-muted" style="color: #fafafa;"></i>
             </a>
 
-            <a href="" class="icon__item" id="search-btn">
-              <i class="fa-solid fa-magnifying-glass fa-2xs text-muted" style="color: #fafafa;"></i>
-            </a>
-
-            <a href="" class="icon__item" id="cart-btn">
+            <a href="/cart.html" class="icon__item" id="cart-btn">
               <i class="fa-solid fa-cart-shopping fa-2xs text-muted" style="color: #fafafa;"></i>
-              <span id="cart__total">3</span>
+              
             </a>
           </div>
         </nav>
@@ -167,45 +163,46 @@
 
   <script>
     const loginsec = document.querySelector('.login__section');
-    const loginlink = document.querySelector('.login_link');
-    const registerlink = document.querySelector('.register_link');
+const loginlink = document.querySelector('.login_link');
+const registerlink = document.querySelector('.register_link');
 
-    registerlink.addEventListener('click', () => {
-      loginsec.classList.add('active');
-    })
+// When the register link is clicked, add the 'active' class to the login section
+registerlink.addEventListener('click', () => {
+  loginsec.classList.add('active');
+})
 
-    loginlink.addEventListener('click', () => {
-      loginsec.classList.remove('active');
-    })
+// When the login link is clicked, remove the 'active' class from the login section
+loginlink.addEventListener('click', () => {
+  loginsec.classList.remove('active');
+})
 
-
-
-    // Xử lý phần password khi người dùng bấm vào icon mắt thì
-    // hiển thị mật khẩu dạng text
-    $(document).ready(function () {
-      $('.icon_eye').click(function () {
-        $(this).toggleClass('open');
-        $(this).children('i').toggleClass('bi-eye-slash-fill bi');
-        if ($(this).hasClass('open')) {
-          $(this).prev().attr('type', 'text');
-        }
-        else {
-          $(this).prev().attr('type', 'password');
-        }
-      })
-    })
-
-    // khi người dùng click vào nút sign up
-    // sẽ có hộp thoại popup thông báo đăng ký thành công
-    let popup = document.getElementById("popup");
-
-    function openPopup() {
-      popup.classList.add("open-popup")//CSS add 
+// Handle the password section when the user clicks on the eye icon
+// to toggle between showing the password as plain text or as a password field
+$(document).ready(function () {
+  $('.icon_eye').click(function () {
+    $(this).toggleClass('open');
+    $(this).children('i').toggleClass('bi-eye-slash-fill bi');
+    if ($(this).hasClass('open')) {
+      $(this).prev().attr('type', 'text');
     }
-
-    function closePopup() {
-      popup.classList.remove("open-popup");
+    else {
+      $(this).prev().attr('type', 'password');
     }
+  })
+})
+
+// When the user clicks on the sign up button, a popup dialog will appear to notify
+// the successful registration
+let popup = document.getElementById("popup");
+
+function openPopup() {
+  popup.classList.add("open-popup");
+}
+
+function closePopup() {
+  popup.classList.remove("open-popup");
+}
+
   </script>
 </body>
 

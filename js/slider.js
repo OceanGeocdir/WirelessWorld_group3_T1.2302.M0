@@ -1,6 +1,6 @@
 /*
 =============
-Glide Js Carousel
+Glide Js Carousel Library from glidejs.com
 =============
  */
 

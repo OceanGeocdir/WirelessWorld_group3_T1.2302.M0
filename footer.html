@@ -9,6 +9,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
     <script src="/angular.min.js"></script>
 
+     <!--! font awesome-->
+     <script
+     src="https://kit.fontawesome.com/402d44b6b7.js"
+     crossorigin="anonymous"
+    ></script>
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet" />
 
@@ -34,29 +40,36 @@
             <div class="container">
                 <div class="footer__top">
                     <div class="footer-top__box">
-                        <h3>EXTRAS</h3>
-                        <a href="#">Brands</a>
-                        <a href="#">Gift Certificates</a>
-                        <a href="#">Affiliate</a>
-                        <a href="#">Specials</a>
-                        <!-- <a href="#">Site Map</a> -->
+                        <h3>PAYMENT</h3>
+                        <!-- Payment methods in column 1 -->
+                        <div class="payment-method">
+                            <a href="" class="zalopay">
+                                <img src="images/payment/zalopay-logo.png" alt="zalopay" />
+                            </a>
+                            <a href="" class="vnpay">
+                                <img src="images/payment/vnpay-logo.png" alt="vnpay" />
+                            </a>
+                            <a href="" class="grabpay">
+                                <img src="images/payment/moca-logo.png" alt="grabpay" />
+                            </a>
+                        </div>
                     </div>
                     <div class="footer-top__box">
                         <h3>INFORMATION</h3>
                         <a href="#">About Us</a>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms & Conditions</a>
                         <a href="#">Contact Us</a>
                         <a href="#">Site Map</a>
                     </div>
-                    <!-- <div class="footer-top__box">
+                    <!--
+                    <div class="footer-top__box">
                         <h3>MY ACCOUNT</h3>
                         <a href="#">My Account</a>
                         <a href="#">Order History</a>
                         <a href="#">Wish List</a>
                         <a href="#">Newsletter</a>
                         <a href="#">Returns</a>
-                    </div> -->
+                    </div>
+                    -->
                     <div class="footer-top__box">
                         <h3>CONTACT US</h3>
                         <div>
@@ -65,7 +78,7 @@
                                     <use xlink:href="./images/sprite.svg#icon-location"></use>
                                 </svg>
                             </span>
-                            173 APTECH, Nam Ky Khoi Nghia street, District 3, VN
+                            173 APTECH, Nam Ky Khoi Nghia <br> street, District 3, VN
                         </div>
                         <div>
                             <span>
@@ -92,56 +105,51 @@
                             HCM city, VN
                         </div>
                     </div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10926.552371338052!2d106.68481456276024!3d10.787555771029549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d34abaadcb%3A0x2ac8698d815ad520!2zRlBUIFNraWxsa2luZyBIQ00gMSAtIEjhu4cgVGjhu5FuZyDEkMOgbyBU4bqhbyBGdWxsLXN0YWNrIERpZ2l0YWwgTWFya2V0aW5nIFF14buRYyBU4bq_!5e0!3m2!1sen!2s!4v1685461358018!5m2!1sen!2s" 
-            width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="footer-top__box">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10926.552371338052!2d106.68481456276024!3d10.787555771029549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d34abaadcb%3A0x2ac8698d815ad520!2zRlBUIFNraWxsa2luZyBIQ00gMSAtIEjhu4cgVGjhu5FuZyDEkMOgbyBU4bqhbyBGdWxsLXN0YWNrIERpZ2l0YWwgTWFya2V0aW5nIFF14buRYyBU4bq_!5e0!3m2!1sen!2s!4v1685461358018!5m2!1sen!2s"
+                            width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
             </div>
-            
+        
             <div class="footer__bottom">
-                <div class="footer-bottom__box">
-
-                </div>
-                <div class="footer-bottom__box">
-
-                </div>
+                <div class="footer-bottom__box"></div>
+                <div class="footer-bottom__box"></div>
             </div>
-
         </footer>
         <!-- TODO -----------------------End Footer -------------------------- -->
-
+        
         <!-- ?-----------------------------PopUp-------------------------------- -->
         <div class="popup hide__popup">
             <div class="popup__content">
-
+        
                 <div class="popup__close">
                     <svg>
                         <use xlink:href="./images/sprite.svg#icon-cross"></use>
                     </svg>
                 </div>
-
+        
                 <div class="popup__left">
                     <div class="popup-img__container">
                         <img class="popup__img" src="./images/popup.jpg" alt="popup">
                     </div>
                 </div>
-
+        
                 <div class="popup__right">
                     <div class="right__content">
                         <h1>Get Discount <span>30%</span> Off</h1>
-
-                        <p>Sign up to our newsletter and save 30% for you next purchase. No spam, we promise!
-                        </p>
-
+        
+                        <p>Sign up to our newsletter and save 30% for your next purchase. No spam, we promise!</p>
+        
                         <form action="#">
                             <input type="email" placeholder="Enter your email..." class="popup__form">
                             <a href="#">Subscribe</a>
                         </form>
-
                     </div>
                 </div>
-
             </div>
         </div>
+        
 
         <!-- ?----------------------------Go To---------------------------- -->
 

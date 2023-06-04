@@ -10,6 +10,8 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet" />
+    <!--! font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
 
@@ -25,6 +27,7 @@
     <link rel="stylesheet" href="styles.css" />
 
     <title>Phone Shop</title>
+
 </head>
 
 <body ng-app="myApp">
@@ -32,31 +35,55 @@
     <div id="header-container"></div>
     <!--!--------------@ Header @----------------->
     <header id="header" class="header">
+        <!-- This is the header section -->
+    
         <div class="page__title-area">
+            <!-- Container for the page title area -->
             <div class="container">
+                <!-- Main container -->
+    
                 <div class="page__title-container">
+                    <!-- Container for the page titles -->
                     <ul class="page__titles">
+                        <!-- List of page titles -->
+    
                         <li>
+                            <!-- Home link -->
                             <a href="/">
                                 <svg>
+                                    <!-- Home icon -->
                                     <use xlink:href="./images/sprite.svg#icon-home"></use>
                                 </svg>
                             </a>
                         </li>
+    
                         <li class="page__title">Cart</li>
+                        <!-- Page title: Cart -->
                     </ul>
                 </div>
             </div>
         </div>
     </header>
-
+    
     <main id="main">
+        <!-- Main section -->
+    
         <section class="section cart__area">
+            <!-- Cart area section -->
+    
             <div class="container">
+                <!-- Main container -->
+    
                 <div class="responsive__cart-area">
+                    <!-- Responsive cart area -->
+    
                     <form class="cart__form">
+                        <!-- Cart form -->
+    
                         <div class="cart__table table-responsive">
+                            <!-- Cart table -->
                             <table width="100%" class="table">
+                                <!-- Table for cart items -->
                                 <thead>
                                     <tr>
                                         <th>PRODUCT</th>
@@ -69,25 +96,30 @@
                                 <tbody>
                                     <tr>
                                         <td class="product__thumbnail">
+                                            <!-- Product thumbnail -->
                                             <a href="#">
                                                 <img id="product-image" src="" alt="">
                                             </a>
                                         </td>
                                         <td class="product__name">
+                                            <!-- Product name -->
                                             <a href="#" id="product-title"></a>
                                             <br><br>
                                             <small id="product-color-size"></small>
                                         </td>
                                         <td class="product__price">
+                                            <!-- Product price -->
                                             <div class="price">
                                                 <span class="new__price" id="product-price"></span>
                                             </div>
                                         </td>
                                         <td class="product__quantity">
+                                            <!-- Product quantity -->
                                             <div class="input-counter">
                                                 <div>
                                                     <span class="minus-btn" id="minus-btn">
                                                         <svg>
+                                                            <!-- Minus icon -->
                                                             <use xlink:href="./images/sprite.svg#icon-minus"></use>
                                                         </svg>
                                                     </span>
@@ -95,6 +127,7 @@
                                                         id="product-quantity">
                                                     <span class="plus-btn" id="plus-btn">
                                                         <svg>
+                                                            <!-- Plus icon -->
                                                             <use xlink:href="./images/sprite.svg#icon-plus"></use>
                                                         </svg>
                                                     </span>
@@ -102,11 +135,13 @@
                                             </div>
                                         </td>
                                         <td class="product__subtotal">
+                                            <!-- Product subtotal -->
                                             <div class="price">
                                                 <span class="new__price" id="product-subtotal"></span>
                                             </div>
                                             <a href="#" class="remove__cart-item" id="remove-cart-item-link">
                                                 <svg>
+                                                    <!-- Trash icon -->
                                                     <use xlink:href="./images/sprite.svg#icon-trash"></use>
                                                 </svg>
                                             </a>
@@ -115,18 +150,22 @@
                                 </tbody>
                             </table>
                         </div>
-
+    
                         <div class="cart-btns">
+                            <!-- Cart buttons -->
                             <div class="continue__shopping">
+                                <!-- Continue shopping button -->
                                 <a href="product.html">Continue Shopping</a>
                             </div>
                             <div class="check__shipping">
+                                <!-- Shipping checkbox -->
                                 <input type="checkbox" id="shipping-checkbox">
                                 <span>Shipping(+7$)</span>
                             </div>
                         </div>
-
+    
                         <div class="cart__totals">
+                            <!-- Cart totals -->
                             <h3>Cart Totals</h3>
                             <ul>
                                 <li>
@@ -143,60 +182,60 @@
                                 </li>
                             </ul>
                             <a href="" onclick="openPopup()">PROCEED TO CHECKOUT</a>
-
                         </div>
-
                     </form>
-
-                </div>
-                <div class="container_popup">
-                    <div class="popup" id="popup">
-                        <img src="images/login/404-tick.png" alt="">
-                        <h2>Thank You!</h2>
-                        <p>Your product have been bought successfully !</p>
-                        <a href="index.html"><button type="button">OK</button></a>
-                    </div>
                 </div>
             </div>
-
-
-
         </section>
-
+    
         <!-- Facility Section -->
         <section class="facility__section section" id="facility">
+            <!-- Facility section -->
+    
             <div class="container">
+                <!-- Main container for facility section -->
+    
                 <div class="facility__contianer">
+                    <!-- Container for facility items -->
+    
                     <div class="facility__box">
+                        <!-- Facility box 1 -->
                         <div class="facility-img__container">
                             <svg>
+                                <!-- Airplane icon -->
                                 <use xlink:href="./images/sprite.svg#icon-airplane"></use>
                             </svg>
                         </div>
                         <p>FREE SHIPPING WORLD WIDE</p>
                     </div>
-
+    
                     <div class="facility__box">
+                        <!-- Facility box 2 -->
                         <div class="facility-img__container">
                             <svg>
+                                <!-- Credit card icon -->
                                 <use xlink:href="./images/sprite.svg#icon-credit-card-alt"></use>
                             </svg>
                         </div>
                         <p>100% MONEY BACK GUARANTEE</p>
                     </div>
-
+    
                     <div class="facility__box">
+                        <!-- Facility box 3 -->
                         <div class="facility-img__container">
                             <svg>
+                                <!-- Credit card icon -->
                                 <use xlink:href="./images/sprite.svg#icon-credit-card"></use>
                             </svg>
                         </div>
                         <p>MANY PAYMENT GATWAYS</p>
                     </div>
-
+    
                     <div class="facility__box">
+                        <!-- Facility box 4 -->
                         <div class="facility-img__container">
                             <svg>
+                                <!-- Headphones icon -->
                                 <use xlink:href="./images/sprite.svg#icon-headphones"></use>
                             </svg>
                         </div>
@@ -206,6 +245,13 @@
             </div>
         </section>
     </main>
+    
+    <!-- ! Popup event -->
+    <div class="toast">
+        <div class="toast-content">
+            <i class="fas fa-solid fa-check check"></i>
+        </div>
+    </div>
 
     <!--!============== Footer ================-->
     <div id="footer-container"></div>
@@ -222,152 +268,154 @@
     </a>
     <!-- script -->
     <script>
-        // Lấy thông tin sản phẩm từ đường dẫn URL
-        function getProductIdFromURL() {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get('id');
+       // Get product ID from URL
+function getProductIdFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('id');
+}
+
+// Fetch product information from products.json
+fetch('products.json')
+    .then(response => response.json())
+    .then(data => {
+        const products = data.products;
+        var matchedProduct = null;
+        const idFromHref = getProductIdFromURL(); // Get ID value from URL
+
+        for (var i = 0; i < products.length; i++) {
+            if (products[i].id == idFromHref) { // Compare by ID value
+                matchedProduct = products[i];
+                break;
+            }
         }
 
-        // Lấy thông tin sản phẩm từ products.json
-        fetch('products.json')
-            .then(response => response.json())
-            .then(data => {
-                const products = data.products;
-                var matchedProduct = null;
-                const idFromHref = getProductIdFromURL(); // Lấy giá trị id từ đường dẫn URL
+        // Check if a product is found
+        if (matchedProduct) {
+            // Populate data from JSON into HTML elements
+            document.getElementById("product-image").src = matchedProduct.image;
+            document.getElementById("product-title").textContent = matchedProduct.title;
+            document.getElementById("product-color-size").textContent = matchedProduct.color[0] + ' / ' + matchedProduct.display_size[0];
+            document.getElementById("product-price").textContent = "$" + matchedProduct.price.toFixed(2);
+            document.getElementById("product-quantity").value = 1;
+            updateSubtotal(matchedProduct.price, 1);
 
-                for (var i = 0; i < products.length; i++) {
-                    if (products[i].id == idFromHref) { // So sánh theo giá trị id
-                        matchedProduct = products[i];
-                        break;
-                    }
-                }
+            // Update product ID in href of the remove__cart-item link
+            document.getElementById("remove-cart-item-link").setAttribute("data-id", matchedProduct.id);
+            document.getElementById("remove-cart-item-link").addEventListener("click", removeCartItem);
 
-                // Kiểm tra xem có sản phẩm được tìm thấy hay không
-                if (matchedProduct) {
-                    // Đổ dữ liệu từ JSON vào các phần tử HTML
-                    document.getElementById("product-image").src = matchedProduct.image;
-                    document.getElementById("product-title").textContent = matchedProduct.title;
-                    document.getElementById("product-color-size").textContent = matchedProduct.color[0] + ' / ' + matchedProduct.display_size[0];
-                    document.getElementById("product-price").textContent = "$" + matchedProduct.price.toFixed(2);
-                    document.getElementById("product-quantity").value = 1;
-                    updateSubtotal(matchedProduct.price, 1);
+            // Increase and decrease quantity when user clicks on "+" and "-"
+            const quantityInput = document.getElementById("product-quantity");
+            const plusBtn = document.getElementById("plus-btn");
+            const minusBtn = document.getElementById("minus-btn");
 
-                    // Cập nhật ID của sản phẩm vào href của thẻ <a> remove__cart-item
-                    document.getElementById("remove-cart-item-link").setAttribute("data-id", matchedProduct.id);
-                    document.getElementById("remove-cart-item-link").addEventListener("click", removeCartItem);
-
-                    // Thực hiện cộng và trừ đơn vị khi người dùng nhấn vào dấu "+" và "-"
-                    const quantityInput = document.getElementById("product-quantity");
-                    const plusBtn = document.getElementById("plus-btn");
-                    const minusBtn = document.getElementById("minus-btn");
-
-                    plusBtn.addEventListener('click', function () {
-                        let quantity = parseInt(quantityInput.value);
-                        quantity += 1;
-                        quantityInput.value = quantity;
-                        updateSubtotal(matchedProduct.price, quantity);
-                    });
-
-                    minusBtn.addEventListener('click', function () {
-                        let quantity = parseInt(quantityInput.value);
-                        if (quantity > 1) {
-                            quantity -= 1;
-                            quantityInput.value = quantity;
-                            updateSubtotal(matchedProduct.price, quantity);
-                        }
-                    });
-
-                    function updateSubtotal(price, quantity) {
-                        const subtotal = price * quantity;
-                        document.getElementById("product-subtotal").textContent = subtotal.toFixed(2);
-                        updateTotal(subtotal);
-                    }
-
-                    function updateTotal(subtotal) {
-                        const shippingCheckbox = document.getElementById("shipping-checkbox");
-                        const totalElement = document.getElementById("total");
-
-                        if (shippingCheckbox.checked) {
-                            const shippingCost = 7;
-                            const total = subtotal + shippingCost;
-                            document.getElementById("shipping-cost").textContent = "$" + shippingCost.toFixed(2);
-                            totalElement.textContent = "$" + total.toFixed(2);
-                        } else {
-                            document.getElementById("shipping-cost").textContent = "$0.00";
-                            totalElement.textContent = "$" + subtotal.toFixed(2);
-                        }
-                        const subtotalElement = document.getElementById("sub-total");
-                        subtotalElement.textContent = subtotal.toFixed(2);
-                    }
-
-                    const shippingCheckbox = document.getElementById("shipping-checkbox");
-                    shippingCheckbox.addEventListener('click', function () {
-                        const subtotal = parseFloat(document.getElementById("product-subtotal").textContent);
-                        updateTotal(subtotal);
-                    });
-                    //Remove CART
-                    function removeCartItem(event) {
-                        event.preventDefault();
-                        const productId = this.getAttribute("data-id");
-                        removeProductFromCart(productId);
-                        updateCart();
-                        alert("Product removed successfully!");
-                        window.location.href = "cart.html";
-                    }
-
-                    function removeProductFromCart(productId) {
-                        // Lấy giỏ hàng từ lưu trữ hoặc từ dữ liệu tạm thời trong trang
-                        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-
-                        // Tìm kiếm sản phẩm trong giỏ hàng dựa trên productId
-                        const index = cartItems.findIndex(item => item.productId === productId);
-
-                        // Nếu tìm thấy sản phẩm, xóa nó khỏi giỏ hàng
-                        if (index !== -1) {
-                            cartItems.splice(index, 1);
-                        }
-
-                        // Cập nhật lại giỏ hàng trong lưu trữ hoặc cập nhật dữ liệu tạm thời trong trang
-                        localStorage.setItem('cartItems', JSON.stringify(cartItems));
-                    }
-
-
-                    function updateCart() {
-                        let subtotal = 0;
-                        const productSubtotals = document.querySelectorAll(".product__subtotal .new__price");
-
-                        productSubtotals.forEach(function (subtotalElement) {
-                            subtotal += parseFloat(subtotalElement.textContent.substring(1));
-                        });
-
-                        const subtotalElement = document.getElementById("subtotal");
-                        subtotalElement.textContent = "$" + subtotal.toFixed(2);
-                    }
-
-                    updateCart();
-
-
-
-                } else {
-                    console.log("Không tìm thấy sản phẩm với ID đã cho.");
-                }
-            })
-            .catch(error => {
-                console.log("Đã xảy ra lỗi: ", error);
+            plusBtn.addEventListener('click', function () {
+                let quantity = parseInt(quantityInput.value);
+                quantity += 1;
+                quantityInput.value = quantity;
+                updateSubtotal(matchedProduct.price, quantity);
             });
 
-        //POPUP CHO Ô PROCESS TO CHECK 
-        let popup = document.getElementById("popup");
+            minusBtn.addEventListener('click', function () {
+                let quantity = parseInt(quantityInput.value);
+                if (quantity > 1) {
+                    quantity -= 1;
+                    quantityInput.value = quantity;
+                    updateSubtotal(matchedProduct.price, quantity);
+                }
+            });
 
-        function openPopup() {
-            popup.classList.add("open-popup")
+            // Update subtotal and total prices
+            function updateSubtotal(price, quantity) {
+                const subtotal = price * quantity;
+                document.getElementById("product-subtotal").textContent = subtotal.toFixed(2);
+                updateTotal(subtotal);
+            }
+
+            function updateTotal(subtotal) {
+                const shippingCheckbox = document.getElementById("shipping-checkbox");
+                const totalElement = document.getElementById("total");
+
+                if (shippingCheckbox.checked) {
+                    const shippingCost = 7;
+                    const total = subtotal + shippingCost;
+                    document.getElementById("shipping-cost").textContent = "$" + shippingCost.toFixed(2);
+                    totalElement.textContent = "$" + total.toFixed(2);
+                } else {
+                    document.getElementById("shipping-cost").textContent = "$0.00";
+                    totalElement.textContent = "$" + subtotal.toFixed(2);
+                }
+                const subtotalElement = document.getElementById("sub-total");
+                subtotalElement.textContent = subtotal.toFixed(2);
+            }
+
+            // Handle shipping checkbox event
+            const shippingCheckbox = document.getElementById("shipping-checkbox");
+            shippingCheckbox.addEventListener('click', function () {
+                const subtotal = parseFloat(document.getElementById("product-subtotal").textContent);
+                updateTotal(subtotal);
+            });
+
+            // Remove product from cart
+            function removeCartItem(event) {
+                event.preventDefault();
+                const productId = this.getAttribute("data-id");
+                removeProductFromCart(productId);
+                updateCart();
+                alert("Product removed successfully!");
+                window.location.href = "cart.html";
+            }
+
+            function removeProductFromCart(productId) {
+                // Get cart items from storage or temporary data in the page
+                const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+                // Find the product in the cart based on productId
+                const index = cartItems.findIndex(item => item.productId === productId);
+
+                // If the product is found, remove it from the cart
+                if (index !== -1) {
+                    cartItems.splice(index, 1);
+                }
+
+                // Update the cart in storage or update the temporary data in the page
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            }
+
+            // Update the cart
+            function updateCart() {
+                let subtotal = 0;
+                const productSubtotals = document.querySelectorAll(".product__subtotal .new__price");
+
+                productSubtotals.forEach(function (subtotalElement) {
+                    subtotal += parseFloat(subtotalElement.textContent.substring(1));
+                });
+
+                const subtotalElement = document.getElementById("subtotal");
+                subtotalElement.textContent = "$" + subtotal.toFixed(2);
+            }
+
+            updateCart();
+        } else {
+            console.log("Product with the given ID was not found.");
+        }
+    })
+    .catch(error => {
+        console.log("An error occurred: ", error);
+    });
+
+// Popup for the "Proceed to Checkout" button
+let popup = document.getElementById("popup");
+
+function openPopup() {
+    popup.classList.add("open-popup");
+}
+
             //CSS add 
-        }
+        
 
-        function closePopup() {
-            popup.classList.remove("open-popup");
-        }
+        // function closePopup() {
+        //     popup.classList.remove("open-popup");
+        // }
     </script>
     <!-- Glide Carousel Script -->
     <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>

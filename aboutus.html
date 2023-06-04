@@ -14,125 +14,8 @@
     integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
     crossorigin="anonymous"></script>
 
-  <style>
-    /*
-======================
-Reset
-======================
-*/
-    :root {
-      --primaryColor: #f1f1f1;
-      --black: #222;
-      --orange: #eb0028;
-      --white: #fff;
-      --grey: #959595;
-      --grey2: #666;
-      --secondaryColor: #2b1f4d;
-      --yellow: #ffcc00;
-      --blue: #02182b;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: inherit;
-    }
-
-    html {
-      font-size: 62.5%;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-    }
-
-    body {
-      overflow-x: hidden;
-      background-color: #e8e8e8;
-    }
-
-    body,
-    input {
-      font-size: 1.6rem;
-      font-weight: 400;
-      font-family: "Archivo", sans-serif;
-      color: var(--black);
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    img {
-      max-width: 100%;
-    }
-
-    h3,
-    h4 {
-      font-weight: 500;
-    }
-
-    /* end of reset css */
-
-    .about {
-      margin: 10rem;
-    }
-
-    .about-1 {
-      position: relative;
-      padding: 7rem;
-    }
-
-    .about-1::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image: url(img_8-min.jpg);
-      background-size: cover;
-      background-position: center;
-      filter: blur(4px);
-      opacity: 0.9;
-      z-index: -1;
-    }
-
-    .about-1 h1 {
-      font-size: 5rem;
-      margin-bottom: 2rem;
-      z-index: 1;
-    }
-
-    .about-1 p {
-      font-size: 1.8rem;
-      margin-bottom: 2rem;
-      text-align: justify;
-      z-index: 1;
-    }
-
-    .about-2 {
-      margin: 5rem;
-    }
-
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: stretch;
-
-    }
-
-    .about-item {
-      /* flex: 1 1 300px;
-      margin: 1rem; */
-      box-shadow: 0px 0px 17px 2px rgba(21, 21, 21, 0.8);
-      border-radius: 20px;
-      padding: 2rem;
-    }
-  </style>
+    <!-- ! Stylesheet -->
+    <link rel="stylesheet" href="aboutus.css">
 </head>
 
 <body>
@@ -141,82 +24,88 @@ Reset
   <div id="header-container"></div>
   <!--!--------------@ Header @----------------->
   <!-- !End of header -->
-  <div class="about">
-    <div class="about-1 text-center">
-      <h1>ABOUT US</h1>
-      <p>
-        Welcome to Ecommerce Phone! We are an online store dedicated to
-        providing high-quality smartphones at affordable prices. With a wide
-        range of brands and models, we strive to offer the latest technology
-        and innovative features to our customers.
-      </p>
-      <p>
-        At Ecommerce Phone, we understand the importance of staying connected
-        in today's fast-paced world. That's why we handpick each phone in our
-        collection, ensuring they meet our strict quality standards. Whether
-        you're a tech enthusiast or a casual user, we have the perfect phone
-        to suit your needs and preferences.
-      </p>
-      <p>
-        Our team is passionate about technology and aims to deliver
-        exceptional customer service. We believe in creating a seamless
-        shopping experience, from browsing our extensive product catalog to
-        fast and secure checkout. We also provide comprehensive product
-        information, customer reviews, and reliable shipping options to make
-        your online shopping journey effortless.
-      </p>
-      <p>
-        We value your trust and satisfaction, which is why we offer a
-        hassle-free return policy and dedicated customer support. If you have
-        any questions, concerns, or feedback, our friendly and knowledgeable
-        team is always here to assist you.
-      </p>
-    </div>
-    <div class="about-2">
-      <div class="content box-lg">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="about-item text-center">
-              <h3>MISSION</h3>
-              <hr />
-              <p>
-                At Ecommerce Phone, our mission is to provide customers with
-                the highest quality smartphones at affordable prices. We aim
-                to offer a seamless online shopping experience, backed by
-                excellent customer service and reliable support.
-              </p>
+
+     <!-- *This is about section  -->
+     <div class="about">
+      <!-- Introduction section -->
+      <div class="about-1 text-center">
+        <h1>ABOUT US</h1>
+        <p>
+          Welcome to Ecommerce Phone! We are an online store dedicated to
+          providing high-quality smartphones at affordable prices. With a wide
+          range of brands and models, we strive to offer the latest technology
+          and innovative features to our customers.
+        </p>
+        <p>
+          At Ecommerce Phone, we understand the importance of staying connected
+          in today's fast-paced world. That's why we handpick each phone in our
+          collection, ensuring they meet our strict quality standards. Whether
+          you're a tech enthusiast or a casual user, we have the perfect phone
+          to suit your needs and preferences.
+        </p>
+        <p>
+          Our team is passionate about technology and aims to deliver
+          exceptional customer service. We believe in creating a seamless
+          shopping experience, from browsing our extensive product catalog to
+          fast and secure checkout. We also provide comprehensive product
+          information, customer reviews, and reliable shipping options to make
+          your online shopping journey effortless.
+        </p>
+        <p>
+          We value your trust and satisfaction, which is why we offer a
+          hassle-free return policy and dedicated customer support. If you have
+          any questions, concerns, or feedback, our friendly and knowledgeable
+          team is always here to assist you.
+        </p>
+      </div>
+    
+      <!-- Mission, Vision, and Achievements section -->
+      <div class="about-2">
+        <div class="content box-lg">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="about-item text-center">
+                <h3>MISSION</h3>
+                <hr />
+                <p>
+                  At Ecommerce Phone, our mission is to provide customers with
+                  the highest quality smartphones at affordable prices. We aim
+                  to offer a seamless online shopping experience, backed by
+                  excellent customer service and reliable support.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="about-item text-center">
-              <h3>VISION</h3>
-              <hr />
-              <p>
-                Our vision is to become the go-to destination for individuals
-                seeking the latest smartphones and cutting-edge technology. We
-                aspire to continuously expand our product catalog, keeping up
-                with the ever-evolving tech industry and offering our
-                customers a wide selection of top-notch devices.
-              </p>
+            <div class="col-md-4">
+              <div class="about-item text-center">
+                <h3>VISION</h3>
+                <hr />
+                <p>
+                  Our vision is to become the go-to destination for individuals
+                  seeking the latest smartphones and cutting-edge technology. We
+                  aspire to continuously expand our product catalog, keeping up
+                  with the ever-evolving tech industry and offering our
+                  customers a wide selection of top-notch devices.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="about-item text-center">
-              <h3>ACHIVEVEMENTS</h3>
-              <hr />
-              <p>
-                Since our establishment, we have successfully served thousands
-                of satisfied customers. Our commitment to quality,
-                affordability, and customer satisfaction has earned us
-                numerous accolades and positive reviews. We take pride in our
-                achievements and continuously strive to exceed expectations.
-              </p>
+            <div class="col-md-4">
+              <div class="about-item text-center">
+                <h3>ACHIEVEMENTS</h3>
+                <hr />
+                <p>
+                  Since our establishment, we have successfully served thousands
+                  of satisfied customers. Our commitment to quality,
+                  affordability, and customer satisfaction has earned us
+                  numerous accolades and positive reviews. We take pride in our
+                  achievements and continuously strive to exceed expectations.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+    
 
   <!-- !This is footer  -->
   <!-- !-----------Footer------------- -->

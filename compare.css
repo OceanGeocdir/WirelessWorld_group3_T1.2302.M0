@@ -1,0 +1,125 @@
+.compare {
+    display: flex; /* Set the display property to flex to create a flex container */
+    justify-content: center; /* Center the flex items horizontally */
+    align-items: center; /* Center the flex items vertically */
+}
+
+.compare__table {
+    width: 95%; /* Set the width of the element to 95% */
+    max-width: 140rem; /* Set the maximum width of the element to 140rem */
+    display: block; /* Set the display property to block */
+    border-radius: 10px; /* Set the border radius to 10px */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4); /* Add a box shadow to the element */
+    padding: 20px; /* Add 20px of padding to the element */
+    margin-bottom: 50px; /* Add a margin of 50px at the bottom of the element */
+    margin-top: 50px; /* Add a margin of 50px at the top of the element */
+}
+
+/* Styles for the selected product section */
+.infor_product.select {
+    border-bottom: 1px solid #a5a3a3; /* Add a 1px solid border at the bottom of the element */
+}
+
+.infor_product .form-control {
+    width: 300px; /* Set the width of the element to 300px */
+    margin-bottom: 10px; /* Add a margin of 10px at the bottom of the element */
+    font-size: 1.6rem; /* Set the font size of the element to 1.6rem */
+}
+
+/* Styles for the information section */
+.infor_product {
+    display: grid; /* Set the display property to grid */
+    grid-template-columns: repeat(4, 25%); /* Create a grid with 4 columns of equal width */
+    gap: 10px; /* Add a gap of 10px between grid items */
+}
+
+.infor_product h3 {
+    padding-left: 10px; /* Add left padding of 10px to the element */
+    margin-bottom: 0; /* Remove the bottom margin from the element */
+}
+
+.infor_product img {
+    width: 300px; /* Set the width of the image to 280px */
+    height: 400px; /* Set the height of the image to 300px */
+}
+
+.infor_product.color {
+    background: rgb(246, 246, 246); /* Set the background color of the element to rgb(246, 246, 246) */
+}
+
+/* Media queries for responsive design */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .infor_product img {
+        width: 200px;
+        height: 250px;
+    }
+
+    .infor_product .form-control {
+        width: 200px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .infor_product img {
+        width: 150px;
+        height: 200px;
+    }
+
+    .infor_product .form-control {
+        width: 150px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .infor_product {
+        font-size: 0.8rem;
+        grid-template-columns: repeat(4, 20%);
+        gap: 30px;
+    }
+
+    .infor_product img {
+        width: 100px;
+        height: 150px;
+    }
+
+    .infor_product .form-control {
+        width: 110px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+    .compare__table {
+        padding: 20px 5px;
+    }
+
+    .infor_product {
+        grid-template-columns: repeat(3, 30%);
+        gap: 5px;
+        font-size: 10px;
+    }
+
+    .infor_product .form-control.end {
+        display: none;
+    }
+
+    .infor_product .form-control {
+        width: 90px;
+    }
+
+    .infor_product .end {
+        display: none;
+    }
+
+    .infor_product img {
+        width: 80px;
+        height: 130px;
+    }
+
+    .infor_product h4, h5 {
+        font-size: 15px;
+    }
+
+    .infor_product h6 {
+        font-size: 12px;
+    }
+}

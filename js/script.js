@@ -1,17 +1,25 @@
 //? ============================ Load funtion cho header & footer
 // ! ----------------------------------------- LOAD HEADER ALL PAGE
+// Function to load the header section of the page
 function loadHeader() {
+  // Create a new XMLHttpRequest object
   var xhttp = new XMLHttpRequest();
+
+  // Define the function to be executed when the readyState changes
   xhttp.onreadystatechange = function () {
+    // Check if the readyState is 4 (request finished) and the status is 200 (successful response)
     if (this.readyState == 4 && this.status == 200) {
+      // Insert the response HTML into the "header-container" element
       document.getElementById("header-container").innerHTML = this.responseText;
 
+      // Get the necessary DOM elements for the navigation functionality
       const navOpen = document.querySelector(".nav__hamburger");
       const navClose = document.querySelector(".close__toggle");
       const menu = document.querySelector(".nav__menu");
       const scrollLink = document.querySelectorAll(".scroll-link");
       const navContainer = document.querySelector(".nav__menu");
 
+      // Add event listener to open the navigation menu
       navOpen.addEventListener("click", () => {
         menu.classList.add("open");
         document.body.classList.add("active");
@@ -19,6 +27,7 @@ function loadHeader() {
         navContainer.style.width = "30rem";
       });
 
+      // Add event listener to close the navigation menu
       navClose.addEventListener("click", () => {
         menu.classList.remove("open");
         document.body.classList.remove("active");
@@ -27,15 +36,14 @@ function loadHeader() {
       });
 
       /*
-=============
-Fixed Navigation
-=============
- */
+      =============
+      Fixed Navigation
+      =============
+      */
 
       const navBar = document.querySelector(".navigation");
 
       // Fix NavBar
-
       window.addEventListener("scroll", (e) => {
         const scrollHeight = window.pageYOffset;
         const navHeight = navBar.getBoundingClientRect().height;
@@ -46,32 +54,13 @@ Fixed Navigation
         }
       });
 
-      //?-----------------------------------------------------------Smooth Scroll
-      // Array.from(scrollLink).map((link) => {
-      //   link.addEventListener("click", (e) => {
-      //     // Prevent Default
-      //     e.preventDefault();
+      /*
+      ---------------------------
+      NAV ICON Functionality
+      ---------------------------
+      */
 
-      //     const id = e.currentTarget.getAttribute("href").slice(1);
-      //     const element = document.getElementById(id);
-      //     const navHeight = navBar.getBoundingClientRect().height;
-      //     const fixNav = navBar.classList.contains("fix__nav");
-      //     let position = element.offsetTop - navHeight;
-
-      //     if (!fixNav) {
-      //       position = position - navHeight;
-      //     }
-
-      //     window.scrollTo({
-      //       left: 0,
-      //       top: position,
-      //     });
-      //     navContainer.style.left = "-30rem";
-      //     document.body.classList.remove("active");
-      //   });
-      // });
-      //?-----------------------------------------------------------NAV ICON
-      //   Login form
+      // Login form
       let login = document.querySelector(".login-form");
 
       document.querySelector("#login-btn").onclick = () => {
@@ -79,41 +68,41 @@ Fixed Navigation
         searchForm.classList.remove("active");
         shoppingCart.classList.remove("active");
       };
-      // shopping cart
-      let shoppingCart = document.querySelector(".shopping-cart");
-
-      document.querySelector("#cart-btn").onclick = () => {
-        shoppingCart.classList.toggle("active");
-        searchForm.classList.remove("active");
-        login.classList.remove("active");
-      };
-      //   search form
-      let searchForm = document.querySelector(".search-form");
-
-      document.querySelector("#search-btn").onclick = () => {
-        searchForm.classList.toggle("active");
-        shoppingCart.classList.remove("active");
-        login.classList.remove("active");
-      };
     }
   };
+
+  // Open a GET request to fetch the header HTML file
   xhttp.open("GET", "header.html", true);
+
+  // Send the request
   xhttp.send();
 }
-// ! ----------------------------------------- LOAD FOOTER ALL PAGE
+
+// Function to load the footer section of the page
 function loadFooter() {
+  // Create a new XMLHttpRequest object
   var xhttp = new XMLHttpRequest();
+
+  // Define the function to be executed when the readyState changes
   xhttp.onreadystatechange = function () {
-    if ((this.readyState == 4) & (this.status == 200)) {
+    // Check if the readyState is 4 (request finished) and the status is 200 (successful response)
+    if (this.readyState == 4 && this.status == 200) {
+      // Insert the response HTML into the "footer-container" element
       document.getElementById("footer-container").innerHTML = this.responseText;
     }
   };
+
+  // Open a GET request to fetch the footer HTML file
   xhttp.open("GET", "footer.html", true);
+
+  // Send the request
   xhttp.send();
 }
 
+// Execute the following functions when the window is fully loaded
 window.onload = function () {
   loadHeader();
   loadFooter();
 };
-// AJAX, readyState la gi  co 5 bien  0 > 4, status la gi co 3 status la 101 200 404
+
+

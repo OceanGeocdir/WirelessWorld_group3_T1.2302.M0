@@ -1,0 +1,171 @@
+/*
+======================
+Reset
+======================
+*/
+   /* Setting up custom CSS variables for colors */
+:root {
+  --primaryColor: #f1f1f1;
+  --black: #222;
+  --orange: #eb0028;
+  --white: #fff;
+  --grey: #959595;
+  --grey2: #666;
+  --secondaryColor: #2b1f4d;
+  --yellow: #ffcc00;
+  --blue: #02182b;
+}
+
+/* Resetting default styles for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* Styling for the root HTML element */
+html {
+  font-size: 62.5%; /* Setting the base font size to 62.5% of the default size (10px) for easier rem unit calculations */
+  box-sizing: border-box; /* Including borders and padding in the box model */
+  scroll-behavior: smooth; /* Smooth scrolling behavior */
+  overflow-x: hidden; /* Hiding horizontal overflow */
+}
+
+/* Styling for the body element */
+body {
+  overflow-x: hidden; /* Hiding horizontal overflow */
+  background-color: #e8e8e8; /* Setting the background color to light gray */
+}
+
+/* Styling for the body and input elements */
+body,
+input {
+  font-size: 1.6rem; /* Setting the font size to 1.6rem (16px) */
+  font-weight: 400; /* Setting the font weight to normal (400) */
+  font-family: "Archivo", sans-serif; /* Setting the font family to Archivo or a fallback sans-serif font */
+  color: var(--black); /* Setting the text color to the value of the --black variable */
+}
+
+/* Styling for anchor (link) elements */
+a {
+  text-decoration: none; /* Removing underline from links */
+}
+
+/* Styling for unordered list elements */
+ul {
+  list-style: none; /* Removing default bullet points from lists */
+}
+
+/* Styling for image elements */
+img {
+  max-width: 100%; /* Ensuring images don't exceed their container's width */
+}
+
+/* Styling for heading elements h3 and h4 */
+h3,
+h4 {
+  font-weight: 500; /* Setting the font weight to semi-bold (500) */
+}
+
+/* End of CSS reset */
+
+/* Styling for the "about" class */
+.about {
+  margin: 10rem; /* Setting margin around the "about" section */
+}
+
+/* Styling for the "about-1" class */
+.about-1 {
+  position: relative; /* Positioning the element relative to its normal position */
+  padding: 7rem; /* Setting padding around the element */
+}
+
+/* Styling for the ::before pseudo-element of the "about-1" class */
+.about-1::before {
+  content: ""; /* Adding content to the pseudo-element */
+  position: absolute; /* Positioning the pseudo-element absolutely */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(images/img_8-min.jpg); /* Setting the background image for the pseudo-element */
+  background-size: cover; /* Scaling the background image to cover the entire element */
+  background-position: center; /* Centering the background image */
+  filter: blur(4px); /* Applying a blur effect to the background image */
+  opacity: 0.4; /* Setting the opacity of the pseudo-element */
+  z-index: -1; /* Placing the pseudo-element behind the content */
+}
+
+/* Styling for the heading element within the "about-1" class */
+.about-1 h1 {
+  font-size: 5rem; /* Setting a large font size for the heading */
+  margin-bottom: 2rem; /* Adding margin at the bottom of the heading */
+  z-index: 1; /* Placing the heading above other content */
+}
+
+/* Styling for the paragraph element within the "about-1" class */
+.about-1 p {
+  font-size: 1.8rem; /* Setting a font size for the paragraph */
+  margin-bottom: 2rem; /* Adding margin at the bottom of the paragraph */
+  text-align: justify; /* Justifying the text within the paragraph */
+  z-index: 1; /* Placing the paragraph above other content */
+}
+
+/* Styling for the "about-2" class */
+.about-2 {
+  margin: 5rem; /* Setting margin around the "about-2" section */
+}
+
+/* Styling for the "row" class */
+.row {
+  display: flex; /* Displaying the element as a flex container */
+  flex-wrap: wrap; /* Allowing flex items to wrap to the next line */
+  align-items: stretch; /* Stretching flex items to match the container's height */
+}
+
+/* Styling for the "about-item" class */
+.about-item {
+  height: 270px;
+  box-shadow: 0px 0px 17px 2px rgba(21, 21, 21, 0.8); /* Adding a box shadow to the element */
+  border-radius: 20px; /* Setting a border radius for rounded corners */
+  padding: 2rem; /* Adding padding around the element */
+}
+
+/* 
+!   RESPONSIVE ABOUT US
+*/
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .about-item {
+        height: 385px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .about-item {
+        font-size: 14px;
+        height: 570px;
+    }
+
+    .about-item h3 {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .about-item {
+        margin-bottom: 20px;
+        height: 340px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+    .about-1 p{
+        font-size: 1.3rem;
+    }
+
+    .about-item {
+        margin-bottom: 20px;
+        height: 480px;
+    }
+}
