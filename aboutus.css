@@ -130,7 +130,75 @@ h4 {
   border-radius: 20px; /* Setting a border radius for rounded corners */
   padding: 2rem; /* Adding padding around the element */
 }
+.login{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 10rem;
+}
+.login button{
+    padding: 15px 40px;
+    font-size: 1.6rem;
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 400;
+    text-align: center;
+}
 
+
+
+
+.bor {
+backdrop-filter: blur(40px);
+padding:5rem; 
+border-radius: 10px;
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+width: 600px;
+}
+.bor h1 {
+text-align: center;
+font-size: 40px;
+text-transform: uppercase;
+border-bottom: 4px solid #333;
+}
+.menu p{
+text-align: left;
+font-size: 25px;
+
+}
+
+
+.menu input {
+width: 100%;
+height: 5rem;
+border: none;
+outline: none;
+border-radius: 10px;
+padding-left: 15px;
+font-size: 17px;
+}
+
+.bt-login {
+text-align: center;
+}
+.bt-login button {
+padding: 10px 35px;
+font-size: 25px;
+text-transform: uppercase;
+font-weight: bold;
+border-radius: 5px;
+margin-top: 15px;
+background: black;
+transition: 0.2s ease-out;
+color: #fff;
+cursor: pointer;
+}
+.bt-login button:hover {
+background: white;
+color: black;
+}
 /* 
 !   RESPONSIVE ABOUT US
 */
