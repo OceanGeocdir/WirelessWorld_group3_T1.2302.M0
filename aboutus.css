@@ -199,6 +199,12 @@ cursor: pointer;
 background: white;
 color: black;
 }
+
+.sitemap{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10rem;
+    }
 /* 
 !   RESPONSIVE ABOUT US
 */
@@ -236,4 +242,5 @@ color: black;
         margin-bottom: 20px;
         height: 480px;
     }
+    
 }
